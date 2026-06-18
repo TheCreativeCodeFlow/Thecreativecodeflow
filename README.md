@@ -1,69 +1,79 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=090d16&height=120&section=header&text=RAHUL%20SEERVI&fontSize=42&fontColor=d4af37&fontAlignY=40&animation=fadeIn" width="100%" alt="Rahul Seervi" />
+</p>
+
+<p align="center">
+  <strong>Product Builder &bull; AI Engineer &bull; SaaS Developer</strong><br/>
+  Building AI products, developer tools, and scalable software systems.<br/>
+  <strong>Current Build:</strong> MockPilot
+</p>
+
+---
+
 <table width="100%">
   <tr>
-    <td width="55%" valign="top">
-      <img src="https://github.com/TheCreativeCodeFlow.png" width="80" height="80" style="border-radius: 50%; border: 2px solid #d4af37; float: left; margin-right: 15px;" />
-      <h3>Rahul Seervi</h3>
-      <p><strong>Founder & Product Builder</strong></p>
-      <p><em>"Code is leverage. Products are impact. Building scalable systems and automation engines."</em></p>
-      <p>🎯 <strong>Current Mission:</strong> Scaling MockPilot & exploring agentic LLM developer workflows.</p>
-      <br/>
-      <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=090d16&title_color=d4af37&icon_color=d4af37&text_color=ffffff&border_color=161b22&hide_rank=true&count_private=true" width="100%" alt="GitHub Stats" />
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>PRODUCTS BUILT</sub><br/>
+      <strong>6+ Shipped</strong>
     </td>
-    <td width="45%" valign="top">
-      <table width="100%" style="border: 1px solid #d4af37; border-radius: 8px; background-color: #090d16;">
-        <tr>
-          <td style="padding: 15px;">
-            <h3>🚀 FLAGSHIP PRODUCT</h3>
-            <h2>MockPilot</h2>
-            <p><strong>Category:</strong> Developer Infrastructure SaaS</p>
-            <p><strong>Status:</strong> 🟢 Active & Scaling</p>
-            <p>AI-powered mock API generation and testing platform that simplifies team mock setups by generating endpoints on demand.</p>
-            <p><strong>Impact:</strong> Cuts frontend-backend integration delays by 40%.</p>
-            <p><code>Next.js</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>LLMs</code> <code>Docker</code></p>
-          </td>
-        </tr>
-      </table>
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>AI PROJECTS</sub><br/>
+      <strong>4+ Deployed</strong>
+    </td>
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>SAAS PLATFORMS</sub><br/>
+      <strong>2+ Launched</strong>
+    </td>
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>HACKATHONS</sub><br/>
+      <strong>Top Ranks</strong>
+    </td>
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>CERTIFICATIONS</sub><br/>
+      <strong>2 Obtained</strong>
+    </td>
+    <td width="16.6%" align="center" style="background-color: #0d1117;">
+      <sub>CURRENT FOCUS</sub><br/>
+      <strong>SaaS & AI</strong>
     </td>
   </tr>
 </table>
 
 ---
 
-### 📊 Build Dashboard
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🎯 Current Mission</h4>
+      <ul>
+        <li>Scaling MockPilot to simplify developer API simulation.</li>
+        <li>Building robust Developer Infrastructure systems.</li>
+        <li>Exploring Agentic LLM workflows & automation pipelines.</li>
+        <li>Learning high-concurrency System Design architectures.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>⚡ Engineering Focus</h4>
+      <ul>
+        <li><strong>SaaS:</strong> Multi-tenant, subscription models, and API integrations.</li>
+        <li><strong>AI Applications:</strong> Semantic parsing, recommenders, and agent loops.</li>
+        <li><strong>Developer Tools:</strong> Mocking tools, CLI tools, and DX optimization.</li>
+        <li><strong>Automation:</strong> Testing pipelines, scripting, and cloud setups.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+---
 
 <table width="100%">
   <tr>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>📦 PRODUCTS BUILT</strong><br/>
-      <h2>6+ Shipped</h2>
-      <sub>From zero to production</sub>
-    </td>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>🤖 AI PROJECTS</strong><br/>
-      <h2>4+ Deployed</h2>
-      <sub>LLMs & recommenders</sub>
-    </td>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>☁️ SAAS PLATFORMS</strong><br/>
-      <h2>2+ Launched</h2>
-      <sub>Subscription & infrastructure</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>🏆 HACKATHONS</strong><br/>
-      <h2>Top Ranks</h2>
-      <sub>Smart India & Tensor</sub>
-    </td>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>📜 CERTIFICATIONS</strong><br/>
-      <h2>Google & Mongo</h2>
-      <sub>Android & Database Expert</sub>
-    </td>
-    <td width="33%" align="center" style="background-color: #0d1117;">
-      <strong>⚡ CURRENT BUILD</strong><br/>
-      <h2>MockPilot v1.2</h2>
-      <sub>Active development</sub>
+    <td style="padding: 15px; border: 1px solid #d4af37; background-color: #090d16;">
+      <h3>🚀 FLAGSHIP PRODUCT: MockPilot</h3>
+      <p><sub>DEVELOPER INFRASTRUCTURE SAAS</sub> &bull; 🟢 <code>Active & Scaling</code></p>
+      <p>An AI-powered mock API generation and testing platform that simplifies team mock setups by dynamically spinning up endpoints on demand based on schema definitions.</p>
+      <p><strong>Impact:</strong> Cuts frontend-backend integration delays by 40% and reduces manual configuration errors.</p>
+      <p><strong>Stack:</strong> <code>Next.js</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>LLMs</code> <code>Docker</code></p>
     </td>
   </tr>
 </table>
