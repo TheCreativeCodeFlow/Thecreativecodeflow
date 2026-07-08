@@ -303,7 +303,4 @@
   <a href="https://rahulseervi.dev"><strong>Portfolio</strong></a> &bull;
   <a href="mailto:seervirahul.is@gmail.com"><strong>Email</strong></a>
 </p>
-
-<p align="center">
-  <sub>Designed with precision. Driven by code. &copy; 2026 Rahul Seervi</sub>
-</p>
+>
