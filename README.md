@@ -1,43 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=090d16&height=120&section=header&text=RAHUL%20SEERVI&fontSize=42&fontColor=d4af37&fontAlignY=40&animation=fadeIn" width="100%" alt="Rahul Seervi" />
+  <img src="./assets/hero.svg" width="100%" alt="Rahul Seervi Banner" />
 </p>
 
 <p align="center">
-  <strong>Product Builder &bull; AI Engineer &bull; SaaS Developer</strong><br/>
-  Building AI products, developer tools, and scalable software systems.<br/>
-  <strong>Current Build:</strong> MockPilot
+  <img src="./assets/metrics.svg" width="100%" alt="Developer Metrics" />
 </p>
-
----
-
-<table width="100%">
-  <tr>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>PRODUCTS BUILT</sub><br/>
-      <strong>6+ Shipped</strong>
-    </td>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>AI PROJECTS</sub><br/>
-      <strong>4+ Deployed</strong>
-    </td>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>SAAS PLATFORMS</sub><br/>
-      <strong>2+ Launched</strong>
-    </td>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>HACKATHONS</sub><br/>
-      <strong>Top Ranks</strong>
-    </td>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>CERTIFICATIONS</sub><br/>
-      <strong>2 Obtained</strong>
-    </td>
-    <td width="16.6%" align="center" style="background-color: #0d1117;">
-      <sub>CURRENT FOCUS</sub><br/>
-      <strong>SaaS & AI</strong>
-    </td>
-  </tr>
-</table>
 
 ---
 
@@ -46,19 +13,19 @@
     <td width="50%" valign="top">
       <h4>🎯 Current Mission</h4>
       <ul>
-        <li>Scaling MockPilot to simplify developer API simulation.</li>
-        <li>Building robust Developer Infrastructure systems.</li>
-        <li>Exploring Agentic LLM workflows & automation pipelines.</li>
-        <li>Learning high-concurrency System Design architectures.</li>
+        <li>Scaling MockPilot to automate simulated API lifecycles.</li>
+        <li>Constructing robust Developer Infrastructure architectures.</li>
+        <li>Implementing multi-agent workflows and backend intelligence.</li>
+        <li>Refining distributed system scaling patterns.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <h4>⚡ Engineering Focus</h4>
       <ul>
-        <li><strong>SaaS:</strong> Multi-tenant, subscription models, and API integrations.</li>
-        <li><strong>AI Applications:</strong> Semantic parsing, recommenders, and agent loops.</li>
-        <li><strong>Developer Tools:</strong> Mocking tools, CLI tools, and DX optimization.</li>
-        <li><strong>Automation:</strong> Testing pipelines, scripting, and cloud setups.</li>
+        <li><strong>SaaS:</strong> Multi-tenant billing, API gateways, and queue layers.</li>
+        <li><strong>AI Applications:</strong> Semantic parsing, vector engines, and agent loops.</li>
+        <li><strong>Developer Tools:</strong> Mock configurations, CLI utilities, and DX loops.</li>
+        <li><strong>Automation:</strong> Testing pipelines, scripting, and cloud deployments.</li>
       </ul>
     </td>
   </tr>
@@ -68,12 +35,17 @@
 
 <table width="100%">
   <tr>
-    <td style="padding: 15px; border: 1px solid #d4af37; background-color: #090d16;">
-      <h3>🚀 FLAGSHIP PRODUCT: MockPilot</h3>
-      <p><sub>DEVELOPER INFRASTRUCTURE SAAS</sub> &bull; 🟢 <code>Active & Scaling</code></p>
-      <p>An AI-powered mock API generation and testing platform that simplifies team mock setups by dynamically spinning up endpoints on demand based on schema definitions.</p>
-      <p><strong>Impact:</strong> Cuts frontend-backend integration delays by 40% and reduces manual configuration errors.</p>
-      <p><strong>Stack:</strong> <code>Next.js</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>LLMs</code> <code>Docker</code></p>
+    <td style="padding: 18px; border: 1.5px solid #d4af37; background-color: #05050a;">
+      <span style="color: #d4af37; font-size: 11px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase;">FLAGSHIP PRODUCT IN FOCUS</span>
+      <h3>🚀 MockPilot &mdash; Developer Infrastructure SaaS</h3>
+      <p><strong>Status:</strong> 🟢 <code>Active &amp; Scaling</code> &bull; <strong>Target Audience:</strong> Product Engineering Teams</p>
+      <p>An intelligent, AI-powered mock API generator and virtualization platform that dynamically translates database schemas and swagger specifications into fully-functional simulated mock endpoints on demand.</p>
+      <ul>
+        <li><strong>Problem:</strong> Fragmented local setups, stale endpoints, and manual JSON stubbing slow down integration speeds by 30-40%.</li>
+        <li><strong>Solution:</strong> Automated schema analysis mapping mock responses to real-world data distributions with built-in latency controls.</li>
+        <li><strong>Impact:</strong> Cut client onboarding and frontend-backend decoupling delays by 40% in collaborative team environments.</li>
+      </ul>
+      <p><strong>Stack:</strong> <code>Next.js</code> &bull; <code>Node.js</code> &bull; <code>Express</code> &bull; <code>PostgreSQL</code> &bull; <code>LLM API Integration</code> &bull; <code>Docker</code> &bull; <code>Git</code></p>
     </td>
   </tr>
 </table>
@@ -84,45 +56,87 @@
 
 <table width="100%">
   <tr>
-    <td width="50%" valign="top">
+    <!-- Card 1: MockPilot -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">DEV TOOLS</span>
       <h3>🚀 MockPilot</h3>
-      <p><sub>DEVELOPER INFRASTRUCTURE SAAS</sub> &bull; 🟢 <code>Active</code></p>
-      <p>AI-powered mock API generation and testing platform. Simplifies client integration loops by spinning up endpoints automatically.</p>
-      <p><code>Next.js</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>Docker</code></p>
+      <p><strong>Status:</strong> 🟢 <code>Active</code></p>
+      <p>AI-powered mock API generation platform simulating complex database schema payloads dynamically.</p>
+      <ul>
+        <li><strong>Problem:</strong> Slow frontend-backend integration loops.</li>
+        <li><strong>Solution:</strong> Automated dynamic endpoint mocks.</li>
+        <li><strong>Impact:</strong> 40% reduction in client integration latency.</li>
+      </ul>
+      <p><code>Next.js</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>LLMs</code></p>
     </td>
-    <td width="50%" valign="top">
+    <!-- Card 2: CropCast -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">AI &amp; MACHINE LEARNING</span>
       <h3>🌾 CropCast</h3>
-      <p><sub>AI AGRICULTURE PLATFORM</sub> &bull; 🟡 <code>Beta</code></p>
-      <p>AI-driven agricultural intelligence suggesting optimal crops based on chemical soil composition and historical weather indexes.</p>
+      <p><strong>Status:</strong> 🟡 <code>Beta</code></p>
+      <p>Agricultural intelligence recommendations using machine learning on soil and climate variables.</p>
+      <ul>
+        <li><strong>Problem:</strong> Farmers lack predictive metrics for seasonal planting.</li>
+        <li><strong>Solution:</strong> Gradient-boosted classifiers matching soil chemistry to yield.</li>
+        <li><strong>Impact:</strong> Empowers crop planning, boosting seasonal forecasting yield.</li>
+      </ul>
       <p><code>React</code> <code>Flask</code> <code>Python</code> <code>Scikit-Learn</code> <code>MongoDB</code></p>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+    <!-- Card 3: Memex -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">PRODUCTIVITY SaaS</span>
       <h3>🧠 Memex</h3>
-      <p><sub>KNOWLEDGE MANAGEMENT PLATFORM</sub> &bull; 🟢 <code>Stable</code></p>
-      <p>Personal second brain and cognitive graph mapping. Integrates bi-directional links and interactive nodes to track ideas.</p>
-      <p><code>React</code> <code>Node.js</code> <code>MongoDB</code> <code>D3.js</code></p>
+      <p><strong>Status:</strong> 🟢 <code>Stable</code></p>
+      <p>A cognitive second brain featuring bi-directional note links and interactive graph engines.</p>
+      <ul>
+        <li><strong>Problem:</strong> Fragmented text files prevent semantic discovery.</li>
+        <li><strong>Solution:</strong> Graph visualization engine mapping notes.</li>
+        <li><strong>Impact:</strong> Restructures memory mapping into an associative database.</li>
+      </ul>
+      <p><code>React</code> <code>Node.js</code> <code>MongoDB</code> <code>D3.js</code> <code>Git</code></p>
     </td>
-    <td width="50%" valign="top">
+    <!-- Card 4: Cypher Resume Analyzer -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">AI RECRUITMENT</span>
       <h3>📄 Cypher Resume Analyzer</h3>
-      <p><sub>AI RECRUITMENT PLATFORM</sub> &bull; 🟢 <code>Stable</code></p>
-      <p>Resume relevance scoring engine parsing job descriptions to output alignment percentages and resume optimization advice.</p>
-      <p><code>JavaScript</code> <code>Node.js</code> <code>Express</code> <code>Gemini APIs</code></p>
+      <p><strong>Status:</strong> 🟢 <code>Stable</code></p>
+      <p>Recruitment screening NLP engine analyzing applicant resume text against target roles.</p>
+      <ul>
+        <li><strong>Problem:</strong> High administrative delays in candidate filtering.</li>
+        <li><strong>Solution:</strong> LLM-driven resume compatibility matrix scoring.</li>
+        <li><strong>Impact:</strong> Gives candidates optimization feedback while reducing filtering time.</li>
+      </ul>
+      <p><code>JavaScript</code> <code>Node.js</code> <code>Express</code> <code>Gemini API</code> <code>CSS</code></p>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+    <!-- Card 5: Smart Threat Detection -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">CYBERSECURITY AI</span>
       <h3>🛡️ Smart Threat Detection</h3>
-      <p><sub>CYBERSECURITY AI PLATFORM</sub> &bull; 🟢 <code>Stable</code></p>
-      <p>AI-driven anomalous traffic logs analysis. Utilizes neural networks to detect zero-day intrusion attempts in real-time.</p>
-      <p><code>Python</code> <code>PyTorch</code> <code>Node.js</code> <code>MongoDB</code></p>
+      <p><strong>Status:</strong> 🟢 <code>Stable</code></p>
+      <p>Deep learning network logs analyzer identifying zero-day intrusion activities.</p>
+      <ul>
+        <li><strong>Problem:</strong> Legacy signature firewalls miss multi-vector attacks.</li>
+        <li><strong>Solution:</strong> Real-time neural anomaly cluster mapping.</li>
+        <li><strong>Impact:</strong> Automates threat warnings to shrink breach window durations.</li>
+      </ul>
+      <p><code>Python</code> <code>PyTorch</code> <code>Node.js</code> <code>MongoDB</code> <code>Git</code></p>
     </td>
-    <td width="50%" valign="top">
+    <!-- Card 6: University Management -->
+    <td width="50%" valign="top" style="padding: 16px;">
+      <span style="color: #ffd700; font-size: 10px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase;">ENTERPRISE INFRA</span>
       <h3>🏫 University Management System</h3>
-      <p><sub>ENTERPRISE ACADEMIC PLATFORM</sub> &bull; 🟢 <code>Stable</code></p>
-      <p>Enterprise administration ecosystem consolidating class registrations, grading systems, and student metrics.</p>
-      <p><code>React</code> <code>Node.js</code> <code>Express</code> <code>MongoDB</code></p>
+      <p><strong>Status:</strong> 🟢 <code>Stable</code></p>
+      <p>Unified educational administrative services ecosystem for grade and registration routing.</p>
+      <ul>
+        <li><strong>Problem:</strong> Administrative grading lags due to database silos.</li>
+        <li><strong>Solution:</strong> Consolidated high-performance document cluster architecture.</li>
+        <li><strong>Impact:</strong> Replaces isolated tools with a single campus portal.</li>
+      </ul>
+      <p><code>React</code> <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>HTML/CSS</code></p>
     </td>
   </tr>
 </table>
@@ -137,45 +151,45 @@
       <strong>🏆 MASTERED</strong>
       <hr/>
       <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>HTML5 / CSS3</li>
-        <li>Git / GitHub</li>
-        <li>MongoDB</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React / Hooks</li>
+        <li>HTML5 &bull; CSS3</li>
+        <li>Git Versioning</li>
+        <li>MongoDB Engine</li>
       </ul>
     </td>
     <td width="25%" valign="top">
       <strong>🚀 BUILDING WITH</strong>
       <hr/>
       <ul>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>PostgreSQL</li>
-        <li>Supabase</li>
-        <li>REST APIs</li>
+        <li>Next.js Framework</li>
+        <li>Node.js Runtime</li>
+        <li>Express.js API</li>
+        <li>PostgreSQL DB</li>
+        <li>Supabase Cloud</li>
+        <li>REST Architecture</li>
       </ul>
     </td>
     <td width="25%" valign="top">
       <strong>🔍 EXPLORING</strong>
       <hr/>
       <ul>
-        <li>Docker</li>
-        <li>LLM Workflows</li>
-        <li>Prompt Eng.</li>
+        <li>Docker Containers</li>
+        <li>LLM Pipelines</li>
+        <li>Prompt Engineering</li>
         <li>System Design</li>
-        <li>Cloud Deploy</li>
+        <li>Cloud Deployment</li>
       </ul>
     </td>
     <td width="25%" valign="top">
       <strong>🎯 FUTURE FOCUS</strong>
       <hr/>
       <ul>
-        <li>AWS</li>
-        <li>Kubernetes</li>
-        <li>Microservices</li>
-        <li>MLOps</li>
-        <li>Distributed Sys</li>
+        <li>AWS Infrastructure</li>
+        <li>Kubernetes Scaling</li>
+        <li>Microservice Design</li>
+        <li>MLOps Automation</li>
+        <li>Distributed Clusters</li>
       </ul>
     </td>
   </tr>
@@ -189,21 +203,21 @@
   <tr>
     <td width="50%" valign="top">
       <h4>💡 Build Products, Not Demos</h4>
-      <p>Demos prove concepts; products serve actual traffic. I build every system to support production-level usage and scale.</p>
+      <p>Demos prove concepts; products serve actual traffic. I write software with active deployment scale, instrumentation, and maintainable boundaries in mind from day one.</p>
     </td>
     <td width="50%" valign="top">
       <h4>🎯 Solve Problems, Not Assignments</h4>
-      <p>Engineers exist to resolve real friction points. The most impactful systems are born from addressing real-world needs.</p>
+      <p>Engineers exist to resolve real friction points. The most impactful systems are born from addressing real-world developer or user requirements.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h4>⚡ Automate Repetitive Friction</h4>
-      <p>Manual replication is a symptom of system neglect. If a task is performed more than twice, it gets scripted.</p>
+      <p>Manual repetition is a symptom of system neglect. If an engineering or operational task is performed more than twice, it gets scripted.</p>
     </td>
     <td width="50%" valign="top">
       <h4>🚀 Learn By Shipping</h4>
-      <p>Reading docs prepares you, but shipping models and systems directly to production is where true competence is built.</p>
+      <p>Reading documentation prepares you, but shipping models, database schemas, and products directly to production users is where true competence is built.</p>
     </td>
   </tr>
 </table>
@@ -246,15 +260,15 @@
 <table width="100%">
   <tr>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=090d16&title_color=d4af37&icon_color=d4af37&text_color=ffffff&border_color=161b22&hide_rank=true&count_private=true" alt="GitHub Stats" width="100%" />
+      <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=05050a&title_color=d4af37&icon_color=d4af37&text_color=ffffff&border_color=1f1f2e&hide_rank=true&count_private=true" alt="GitHub Stats" width="100%" />
     </td>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=compact&theme=dark&bg_color=090d16&title_color=d4af37&text_color=ffffff&border_color=161b22" alt="Top Languages" width="100%" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=compact&theme=dark&bg_color=05050a&title_color=d4af37&text_color=ffffff&border_color=1f1f2e" alt="Top Languages" width="100%" />
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=TheCreativeCodeFlow&theme=dark&background=090d16&title=d4af37&fire=d4af37&ring=ffd700&currStreakNum=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&border=161b22" alt="GitHub Streak" width="100%" />
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=TheCreativeCodeFlow&theme=dark&background=05050a&title=d4af37&fire=d4af37&ring=ffd700&currStreakNum=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&border=1f1f2e" alt="GitHub Streak" width="100%" />
     </td>
   </tr>
   <tr>
@@ -278,19 +292,19 @@
   <tr>
     <td width="25%" align="center">
       <h4>🛠️ DEV TOOLS</h4>
-      <p>Building linters, CLI tools, and setup mock layers.</p>
+      <p>Linters, API virtualizers, and setup automation.</p>
     </td>
     <td width="25%" align="center">
-      <h4>🤖 AI APP AGENTS</h4>
-      <p>Orchestrating agent workflows and vector data parsing.</p>
+      <h4>🤖 AI SYSTEM AGENTS</h4>
+      <p>Contextual RAG engines and orchestrators.</p>
     </td>
     <td width="25%" align="center">
-      <h4>☁️ SAAS SYSTEMS</h4>
-      <p>Auth templates, webhooks, and scalable databases.</p>
+      <h4>☁️ SAAS PLATFORMS</h4>
+      <p>Secure database pipelines and subscription setups.</p>
     </td>
     <td width="25%" align="center">
       <h4>🤝 OPEN SOURCE</h4>
-      <p>Eager to audit schemas and optimize backend systems.</p>
+      <p>Performance optimization and schema design.</p>
     </td>
   </tr>
 </table>
