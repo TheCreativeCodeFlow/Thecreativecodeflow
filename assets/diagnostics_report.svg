@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" width="100%" height="100%">
+  <defs>
+    <style>
+      :root {
+        --bg: #0b0b0c;
+        --panel-bg: #121214;
+        --border: #222225;
+        --text-primary: #e4e4e7;
+        --text-secondary: #71717a;
+        --accent: #e2b13c;
+        --led-green: #30d158;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #ffffff;
+          --panel-bg: #f5f5f7;
+          --border: #e5e5ea;
+          --text-primary: #1c1c1e;
+          --text-secondary: #8e8e93;
+          --accent: #c69c24;
+          --led-green: #34c759;
+        }
+      }
+      .window-rect {
+        fill: var(--panel-bg);
+        stroke: var(--border);
+        stroke-width: 1;
+      }
+      .panel-rect {
+        fill: var(--bg);
+        stroke: var(--border);
+        stroke-width: 1;
+      }
+      .dot {
+        fill: var(--border);
+      }
+      .log-text {
+        font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+        font-size: 11px;
+        fill: var(--text-primary);
+      }
+      .log-muted {
+        fill: var(--text-secondary);
+      }
+      .pulse-green {
+        animation: pulse-glow 2s infinite ease-in-out;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Report Window Frame -->
+  <rect x="5" y="5" width="790" height="130" rx="10" class="window-rect" />
+
+  <!-- Window Header -->
+  <circle cx="25" cy="22" r="4.5" class="dot" />
+  <circle cx="39" cy="22" r="4.5" class="dot" />
+  <circle cx="53" cy="22" r="4.5" class="dot" />
+  <text x="70" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="var(--text-secondary)">Diagnostics Complete - Report Status</text>
+
+  <!-- Left Console Column -->
+  <rect x="20" y="45" width="460" height="75" rx="6" class="panel-rect" />
+  
+  <text x="35" y="68" class="log-text">
+    <tspan fill="var(--text-secondary)">Engineering Runtime</tspan> <tspan fill="var(--text-secondary)">........</tspan> <tspan fill="var(--accent)" font-weight="bold">ACTIVE</tspan>
+  </text>
+  
+  <text x="35" y="88" class="log-text">
+    <tspan fill="var(--text-secondary)">Build Status</tspan> <tspan fill="var(--text-secondary)">...............</tspan> <tspan fill="var(--led-green)" font-weight="bold">READY</tspan>
+  </text>
+
+  <text x="35" y="108" class="log-text">
+    <tspan fill="var(--text-secondary)">Next Build</tspan> <tspan fill="var(--text-secondary)">.................</tspan> <tspan fill="var(--text-primary)" font-weight="bold">INITIALIZED</tspan>
+  </text>
+
+  <!-- Right Workspace Monitor -->
+  <rect x="500" y="45" width="280" height="75" rx="6" class="panel-rect" />
+  
+  <text x="520" y="66" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="var(--text-secondary)" letter-spacing="1">SYSTEM WORKSPACE STATUS</text>
+  
+  <circle cx="535" cy="92" r="4.5" fill="var(--led-green)" />
+  <circle cx="535" cy="92" r="8.5" fill="var(--led-green)" opacity="0.3" class="pulse-green" />
+  
+  <text x="555" y="96" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="var(--led-green)" letter-spacing="1">READY TO BUILD</text>
+</svg>

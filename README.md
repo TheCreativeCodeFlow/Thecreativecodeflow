@@ -121,6 +121,20 @@ v1.1.0 (Q3 2023)      - Android certification & mobile lifecycle module compiled
 
 ---
 
+### 📊 RahulOS Diagnostics Center
+
+<div align="center">
+  <img src="./assets/diagnostics_monitor.svg" width="100%" alt="RahulOS System Diagnostics" />
+  <br><br>
+  <a href="https://github.com/TheCreativeCodeFlow">
+    <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&theme=dark&background=121214&border=222225&ring=e2b13c&fire=e2b13c&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=e2b13c&sideLabels=ffffff&dates=71717a" width="100%" alt="GitHub Contribution Telemetry" />
+  </a>
+  <br><br>
+  <img src="./assets/diagnostics_report.svg" width="100%" alt="System Status Report" />
+</div>
+
+---
+
 ### 🔌 External System Connection (Collaboration)
 
 ```text
