@@ -1,13 +1,15 @@
-<p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Rahul Seervi static-first banner" />
-</p>
+<div align="center">
+
+### Rahul Seervi
+
+Product Builder · AI Engineer · SaaS Systems
+
+I build developer tools, SaaS systems, and AI workflows with a bias toward reliability, maintainability, and fast-loading interfaces.
+
+</div>
 
 <p align="center">
   <img src="./assets/metrics.svg" width="100%" alt="Engineering dashboard" />
-</p>
-
-<p align="center">
-  I build developer tools, SaaS systems, and AI workflows with a bias toward reliability, maintainability, and fast-loading interfaces.
 </p>
 
 ---
