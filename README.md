@@ -52,9 +52,19 @@
 
 I am most useful on developer tools, internal platforms, AI workflow systems, and performance-minded product engineering. If a project needs cleaner architecture, faster iteration loops, or less dependency on external runtime services, that is the right conversation.
 
+### GitHub Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TheCreativeCodeFlow&theme=github-dark&hide_border=true&area=true" alt="GitHub contributions graph for TheCreativeCodeFlow" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&theme=dark&background=05050a&border=1f1f2e&stroke=1f1f2e&ring=d4af37&fire=d4af37&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=d4af37&sideLabels=ffffff&dates=888899" alt="GitHub current and longest streak for TheCreativeCodeFlow" width="100%" />
+</p>
+
 <p align="center">
   <a href="https://github.com/TheCreativeCodeFlow"><strong>GitHub</strong></a> &bull;
-  <a href="https://linkedin.com/in/rahulseervi"><strong>LinkedIn</strong></a> &bull;
-  <a href="https://rahulseervi.dev"><strong>Portfolio</strong></a> &bull;
-  <a href="mailto:seervirahul.is@gmail.com"><strong>Email</strong></a>
+  <a href="https://www.linkedin.com/in/rahul-seervi-thecreativecodeflow/"><strong>LinkedIn</strong></a> &bull;
+  <a href="https://rahulseervi.vercel.app/"><strong>Portfolio</strong></a> &bull;
+  <a href="mailto:thecreativecodeflow@gmail.com"><strong>Email</strong></a>
 </p>
