@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100%">
+  <defs>
+    <style>
+      :root {
+        --bg: #0b0b0c;
+        --panel-bg: #121214;
+        --border: #222225;
+        --text-primary: #e4e4e7;
+        --text-secondary: #71717a;
+        --accent: #e2b13c;
+        --led-green: #30d158;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #ffffff;
+          --panel-bg: #f5f5f7;
+          --border: #e5e5ea;
+          --text-primary: #1c1c1e;
+          --text-secondary: #8e8e93;
+          --accent: #c69c24;
+          --led-green: #34c759;
+        }
+      }
+      .card-rect {
+        fill: var(--panel-bg);
+        stroke: var(--border);
+        stroke-width: 1;
+      }
+      .label-text {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        fill: var(--text-secondary);
+      }
+      .value-text {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        fill: var(--text-primary);
+      }
+      .accent-value {
+        fill: var(--accent);
+      }
+      .card-led {
+        fill: var(--led-green);
+      }
+      .pulse {
+        animation: pulse-glow 2s infinite ease-in-out;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Card 1: Shipped Products -->
+  <rect x="10" y="10" width="185" height="80" rx="8" class="card-rect" />
+  <text x="25" y="32" class="label-text">SHIPPED PRODUCTS</text>
+  <text x="25" y="62" class="value-text">5 Production Apps</text>
+  <circle cx="170" cy="30" r="3.5" fill="var(--accent)" />
+
+  <!-- Card 2: Active Focus -->
+  <rect x="207" y="10" width="185" height="80" rx="8" class="card-rect" />
+  <text x="222" y="32" class="label-text">ACTIVE FOCUS</text>
+  <text x="222" y="62" class="value-text accent-value">MockPilot SaaS</text>
+  <circle cx="367" cy="30" r="3.5" class="card-led" />
+  <circle cx="367" cy="30" r="7" class="card-led pulse" opacity="0.3" />
+
+  <!-- Card 3: Repositories -->
+  <rect x="404" y="10" width="185" height="80" rx="8" class="card-rect" />
+  <text x="419" y="32" class="label-text">ECOSYSTEM</text>
+  <text x="419" y="62" class="value-text">High-Signal Work</text>
+  <circle cx="564" cy="30" r="3.5" fill="var(--text-secondary)" />
+
+  <!-- Card 4: Dev Runtime -->
+  <rect x="601" y="10" width="189" height="80" rx="8" class="card-rect" />
+  <text x="616" y="32" class="label-text">AI RUNTIME ENGINE</text>
+  <text x="616" y="62" class="value-text">Continuous Loop</text>
+  <circle cx="762" cy="30" r="3.5" fill="var(--accent)" />
+</svg>

@@ -1,72 +1,139 @@
 <div align="center">
 
-### Rahul Seervi
+  <!-- Setup Assistant Window (Hero + System Header) -->
+  <img src="./assets/hero.svg" width="100%" alt="RahulOS v3.0 Setup and Status Bar" />
 
-Product Builder · AI Engineer · SaaS Systems
+  <br>
 
-I build developer tools, SaaS systems, and AI workflows with a bias toward reliability, maintainability, and fast-loading interfaces.
+  <!-- Dashboard Metrics Pane -->
+  <img src="./assets/dashboard_metrics.svg" width="100%" alt="System Metrics Dashboard" />
 
 </div>
 
+---
+
+### 🖥️ Workspace Applications
+
 <p align="center">
-  <img src="./assets/metrics.svg" width="100%" alt="Engineering dashboard" />
+  <img src="./assets/terminal.svg" width="49%" alt="RahulOS Terminal Console" />
+  <img src="./assets/process_monitor.svg" width="49%" alt="RahulOS Process Monitor" />
 </p>
 
 ---
 
-### Current Focus
+### 📁 Workspace Explorer
 
-- Scaling MockPilot as a practical mock API and infrastructure layer for product teams.
-- Shipping cleaner backend workflows for agentic automation and internal developer tools.
-- Designing systems that keep working when third-party services fail.
+Click on any folder application to load the detailed inspector card.
 
-### High-Signal Work
+<details>
+  <summary>📁 MockPilot (SaaS &amp; API Infrastructure)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/MockPilot">
+      <img src="./assets/projects/mockpilot.svg" width="100%" alt="MockPilot Project Card" />
+    </a>
+  </p>
+</details>
 
-- MockPilot: AI-powered mock API generation for schema-driven endpoints. Stack: Next.js, Node.js, Express, PostgreSQL, Docker.
-- CropCast: Agricultural intelligence and forecasting with machine learning. Stack: React, Flask, Python, Scikit-Learn, MongoDB.
-- Memex: A second-brain workspace built around linked notes and graph navigation. Stack: React, Node.js, MongoDB, D3.js.
-- Cypher Resume Analyzer: Resume screening and role matching with NLP-assisted scoring. Stack: JavaScript, Node.js, Express, Gemini API, CSS.
+<details>
+  <summary>📁 CropCast (ML Forecasting Engine)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/CropCast">
+      <img src="./assets/projects/cropcast.svg" width="100%" alt="CropCast Project Card" />
+    </a>
+  </p>
+</details>
 
-### Operating Principles
+<details>
+  <summary>📁 Memex (Graph-based Second Brain)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/Memex">
+      <img src="./assets/projects/memex.svg" width="100%" alt="Memex Project Card" />
+    </a>
+  </p>
+</details>
 
-- Build products, not demos.
-- Solve high-friction problems first.
-- Automate anything repeated.
-- Prefer static assets and build-time generation over live widgets.
+<details>
+  <summary>📁 Cypher Resume Analyzer (AI Semantic Matcher)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/Cypher-Resume-Analyzer">
+      <img src="./assets/projects/cypher.svg" width="100%" alt="Cypher Resume Analyzer Project Card" />
+    </a>
+  </p>
+</details>
 
-### Stack Snapshot
+<details>
+  <summary>📁 University Management System (Enterprise Portal)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/University-Management-System">
+      <img src="./assets/projects/university.svg" width="100%" alt="University Management System Project Card" />
+    </a>
+  </p>
+</details>
 
-- Frontend: React, Next.js, HTML, CSS.
-- Backend: Node.js, Express, Flask.
-- Data: PostgreSQL, MongoDB, Supabase.
-- Systems: Docker, Git, REST APIs, LLM integrations.
+---
 
-### Roadmap
+### ⚙️ System Preferences (Engineering Philosophy)
 
-- Q3 2023: Android certification and mobile lifecycle patterns.
-- Q4 2023: MongoDB certification and document-model optimization.
-- Q1 2024: Hackathon work across Tensor Hackathon and Smart India Hackathon.
-- Q3 2024: MockPilot v1.0 shipped.
-- Q1 2025: CropCast and Memex expanded into active product work.
-- Now: Refining developer tooling, SaaS architecture, and AI-assisted workflows.
+| Setting | State | Configuration Target |
+| :--- | :---: | :--- |
+| **🧠 AI Integration** | `ON` | Gemini API & LLM Agent Runtimes for workflow automation |
+| **⚙️ Automation** | `ON` | Automated tests & self-contained developer scripts |
+| **🏗️ Scalability** | `ON` | Decoupled local service architecture & high-throughput DBs |
+| **📖 Learning Mode** | `ALWAYS` | System Design, Android lifecycles, and advanced database specs |
+| **🚀 Shipping Velocity** | `EARLY` | Fast release loops, minimal dependencies, and clean code paths |
 
-### Collaboration
+---
 
-I am most useful on developer tools, internal platforms, AI workflow systems, and performance-minded product engineering. If a project needs cleaner architecture, faster iteration loops, or less dependency on external runtime services, that is the right conversation.
+### 🎛️ System Modules (Tech Stack)
 
-### GitHub Activity
+| Layer | Modules | Execution Environment |
+| :--- | :--- | :--- |
+| **Frontend Engine** | `React` `Next.js` `HTML5` `CSS3` | Client views, responsive systems, and performance tuning |
+| **Backend Runtime** | `Node.js` `Express` `Flask` `Spring Boot` | REST APIs, pipeline handlers, and background loops |
+| **Data Storage** | `PostgreSQL` `MongoDB` `MySQL` `Supabase` | Document optimization, relational constraints, and caches |
+| **Systems Tooling** | `Docker` `Git` `Shell Scripts` `APIs` | Containerization, local tooling, and dev workspaces |
+
+---
+
+### 📜 System Log & Version History
+
+```bash
+v3.0.0 (Active Cycle) - Refining developer tooling, SaaS architecture, and AI-assisted workflows.
+v2.2.0 (Q1 2025)      - Expanded CropCast and Memex into active product workspaces.
+v2.1.0 (Q3 2024)      - Shipped MockPilot v1.0 core engine.
+v2.0.0 (Q1 2024)      - Smart India & Tensor Hackathon builds deployed.
+v1.2.0 (Q4 2023)      - MongoDB certification, document-model optimizations integrated.
+v1.1.0 (Q3 2023)      - Android certification & mobile lifecycle module compiled.
+```
+
+---
+
+### ⚡ Build Pipeline Status
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TheCreativeCodeFlow&theme=github-dark&hide_border=true&area=true" alt="GitHub contributions graph for TheCreativeCodeFlow" width="100%" />
+  <img src="./assets/build_pipeline.svg" width="100%" alt="Continuous Build Pipeline" />
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&theme=dark&background=05050a&border=1f1f2e&stroke=1f1f2e&ring=d4af37&fire=d4af37&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=d4af37&sideLabels=ffffff&dates=888899" alt="GitHub current and longest streak for TheCreativeCodeFlow" width="100%" />
-</p>
+---
 
-<p align="center">
-  <a href="https://github.com/TheCreativeCodeFlow"><strong>GitHub</strong></a> &bull;
-  <a href="https://www.linkedin.com/in/rahul-seervi-thecreativecodeflow/"><strong>LinkedIn</strong></a> &bull;
-  <a href="https://rahulseervi.vercel.app/"><strong>Portfolio</strong></a> &bull;
-  <a href="mailto:thecreativecodeflow@gmail.com"><strong>Email</strong></a>
-</p>
+### 🔌 External System Connection (Collaboration)
+
+```text
+Target Core: Developer tools, internal platforms, AI workflow engines, and product engineering.
+Optimal Input: Projects requiring clean system design, fast iteration loops, and independent local runtimes.
+Establish Connection: If a workspace matches these parameters, open a socket connection via contact.sys below.
+```
+
+<br>
+
+<div align="center">
+
+| [🖥️ github.sys](https://github.com/TheCreativeCodeFlow) | [💼 linkedin.sys](https://www.linkedin.com/in/rahul-seervi-thecreativecodeflow/) | [🌐 portfolio.sys](https://rahulseervi.vercel.app/) | [✉️ contact.sys](mailto:thecreativecodeflow@gmail.com) |
+| :---: | :---: | :---: | :---: |
+
+</div>
