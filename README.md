@@ -26,11 +26,41 @@
 Click on any folder application to load the detailed inspector card.
 
 <details>
+  <summary>📁 CodeZilaa (Placement Prep &amp; Code Visualizer)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/CodeZilaa">
+      <img src="./assets/projects/codezilaa.svg" width="100%" alt="CodeZilaa Project Card" />
+    </a>
+  </p>
+</details>
+
+<details>
+  <summary>📁 Distributed Job Scheduler (High-Resilience Background Processing)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/Distributed-job-Scheduler">
+      <img src="./assets/projects/scheduler.svg" width="100%" alt="Distributed Job Scheduler Project Card" />
+    </a>
+  </p>
+</details>
+
+<details>
   <summary>📁 MockPilot (SaaS &amp; API Infrastructure)</summary>
   <br>
   <p align="center">
     <a href="https://github.com/TheCreativeCodeFlow/MockPilot">
       <img src="./assets/projects/mockpilot.svg" width="100%" alt="MockPilot Project Card" />
+    </a>
+  </p>
+</details>
+
+<details>
+  <summary>📁 PharmaCare (Smart Pharmacy Inventory Management System)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/Pharmacy-Inventory-Management-System">
+      <img src="./assets/projects/pharmacare.svg" width="100%" alt="PharmaCare Project Card" />
     </a>
   </p>
 </details>
@@ -66,6 +96,16 @@ Click on any folder application to load the detailed inspector card.
 </details>
 
 <details>
+  <summary>📁 Interactive Portfolio (WebGL &amp; Interaction Showcase)</summary>
+  <br>
+  <p align="center">
+    <a href="https://github.com/TheCreativeCodeFlow/About-ME">
+      <img src="./assets/projects/portfolio.svg" width="100%" alt="Interactive Portfolio Project Card" />
+    </a>
+  </p>
+</details>
+
+<details>
   <summary>📁 University Management System (Enterprise Portal)</summary>
   <br>
   <p align="center">
@@ -93,17 +133,18 @@ Click on any folder application to load the detailed inspector card.
 
 | Layer | Modules | Execution Environment |
 | :--- | :--- | :--- |
-| **Frontend Engine** | `React` `Next.js` `HTML5` `CSS3` | Client views, responsive systems, and performance tuning |
-| **Backend Runtime** | `Node.js` `Express` `Flask` `Spring Boot` | REST APIs, pipeline handlers, and background loops |
+| **Frontend Engine** | `React` `Next.js` `Framer Motion` `GSAP` `TailwindCSS` | Client views, responsive systems, and performance tuning |
+| **Backend Runtime** | `Node.js` `Express` `Flask` `Spring Boot` `FastAPI` | REST APIs, pipeline handlers, and background loops |
 | **Data Storage** | `PostgreSQL` `MongoDB` `MySQL` `Supabase` | Document optimization, relational constraints, and caches |
-| **Systems Tooling** | `Docker` `Git` `Shell Scripts` `APIs` | Containerization, local tooling, and dev workspaces |
+| **Systems Tooling** | `Docker` `Git` `pnpm` `Turborepo` `Shell Scripts` | Containerization, local tooling, and dev workspaces |
 
 ---
 
 ### 📜 System Log & Version History
 
 ```bash
-v3.0.0 (Active Cycle) - Refining developer tooling, SaaS architecture, and AI-assisted workflows.
+v3.1.0 (Active Cycle) - Deployed CodeZilaa and Distributed Job Scheduler into active production workspaces.
+v3.0.0 (Q1-Q2 2026)   - Overhauled developer profile with system monitoring interface and unified project architecture.
 v2.2.0 (Q1 2025)      - Expanded CropCast and Memex into active product workspaces.
 v2.1.0 (Q3 2024)      - Shipped MockPilot v1.0 core engine.
 v2.0.0 (Q1 2024)      - Smart India & Tensor Hackathon builds deployed.
