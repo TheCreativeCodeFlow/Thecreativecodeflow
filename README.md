@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SYSTEM-SECURED-00FF87?style=flat-square&amp;labelColor=080B10&amp;color=00FF87" alt="System Secured" />
+  <img src="https://img.shields.io/badge/SYSTEM-SECURED-00FF87?style=flat-square&labelColor=080B10&color=00FF87" alt="System Secured" />
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/WORKSPACE-STABLE-00E5FF?style=flat-square&amp;labelColor=080B10&amp;color=00E5FF" alt="Workspace Stable" />
+  <img src="https://img.shields.io/badge/WORKSPACE-STABLE-00E5FF?style=flat-square&labelColor=080B10&color=00E5FF" alt="Workspace Stable" />
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/DAEMON_PORT-9000_//_ACTIVE-FF9100?style=flat-square&amp;labelColor=080B10&amp;color=FF9100" alt="Daemon Active" />
+  <img src="https://img.shields.io/badge/DAEMON_PORT-9000_//_ACTIVE-FF9100?style=flat-square&labelColor=080B10&color=FF9100" alt="Daemon Active" />
 </p>
 
 ## RAHUL SEERVI
@@ -132,16 +132,16 @@ SYS_EVENTS ➔
 
 <p align="center">
   <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&amp;show_icons=true&amp;theme=dark&amp;bg_color=030508&amp;hide_border=false&amp;border_color=0F172A&amp;title_color=00FF87&amp;text_color=64748B&amp;icon_color=00E5FF&amp;text_bold=false" width="49%" alt="GitHub Profile Stats" />
+    <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&icon_color=00E5FF&text_bold=false" width="49%" alt="GitHub Profile Stats" />
   </a>
   <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&amp;layout=donut&amp;theme=dark&amp;bg_color=030508&amp;hide_border=false&amp;border_color=0F172A&amp;title_color=00FF87&amp;text_color=64748B&amp;langs_count=5" width="49%" alt="GitHub Top Languages" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=donut&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&langs_count=5" width="49%" alt="GitHub Top Languages" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&amp;theme=dark&amp;background=030508&amp;border=0F172A&amp;ring=00E5FF&amp;fire=FF9100&amp;currStreakNum=00FF87&amp;sideNums=F1F5F9&amp;currStreakLabel=00FF87&amp;sideLabels=64748B&amp;dates=64748B" width="100%" alt="GitHub Contribution Streak Telemetry" />
+    <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&theme=dark&background=030508&border=0F172A&ring=00E5FF&fire=FF9100&currStreakNum=00FF87&sideNums=F1F5F9&currStreakLabel=00FF87&sideLabels=64748B&dates=64748B" width="100%" alt="GitHub Contribution Streak Telemetry" />
   </a>
 </p>
 
