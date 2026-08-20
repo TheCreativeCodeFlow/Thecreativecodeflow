@@ -135,14 +135,26 @@ SYS_EVENTS ➔
   <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/github-contribution-grid-snake/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Snake Grid" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-stats-extended.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&icon_color=00E5FF&text_bold=false" width="49%" alt="GitHub Profile Stats" />
-  </a>
-  <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=donut&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&langs_count=5" width="49%" alt="GitHub Top Languages" />
-  </a>
-</p>
+```text
+┌──────────────────────────────────────────────────────────┐
+│ GITHUB CORE TELEMETRY // SYSTEM NODE                     │
+├──────────────────────────────┬───────────────────────────┤
+│ Repositories: 45             │ Followers: 10             │
+│ Profile Stars: 55            │ Stored Forks: 2            │
+│ Core Account: Active         │ Environment: Stable       │
+├──────────────────────────────┴───────────────────────────┤
+│ ACTIVE STREAK ENGINE                                     │
+├──────────────────────────────┬───────────────────────────┤
+│ Current Streak: 3            │ Longest Streak: 17         │
+│ Total Active Days: 142       │ Registry: Verified        │
+├──────────────────────────────┴───────────────────────────┤
+│ PRIMARY LANGUAGE DISTRIBUTION                             │
+├──────────────────────────────────────────────────────────┤
+│  TypeScript   [██████████████░░░░░░]  72%  │
+│  Python       [████░░░░░░░░░░░░░░░░]  24%  │
+│  JavaScript   [░░░░░░░░░░░░░░░░░░░░]   3%  │
+└──────────────────────────────────────────────────────────┘
+```
 
 ---
 
