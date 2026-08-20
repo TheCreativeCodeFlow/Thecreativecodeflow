@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SYSTEM-SECURED-00FF87?style=flat-square&labelColor=080B10&color=00FF87" alt="System Secured" />
+  <img src="https://img.shields.io/badge/SYSTEM-SECURED-00FF87?style=flat-square&amp;labelColor=080B10&amp;color=00FF87" alt="System Secured" />
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/WORKSPACE-STABLE-00E5FF?style=flat-square&labelColor=080B10&color=00E5FF" alt="Workspace Stable" />
+  <img src="https://img.shields.io/badge/WORKSPACE-STABLE-00E5FF?style=flat-square&amp;labelColor=080B10&amp;color=00E5FF" alt="Workspace Stable" />
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/DAEMON_PORT-9000_//_ACTIVE-FF9100?style=flat-square&labelColor=080B10&color=FF9100" alt="Daemon Active" />
+  <img src="https://img.shields.io/badge/DAEMON_PORT-9000_//_ACTIVE-FF9100?style=flat-square&amp;labelColor=080B10&amp;color=FF9100" alt="Daemon Active" />
 </p>
 
 ## RAHUL SEERVI
@@ -130,18 +130,17 @@ SYS_EVENTS ➔
   <img src="./assets/system_diagnostics.svg" width="100%" alt="System Diagnostics Log &amp; Metrics" />
 </p>
 
+<h4 align="center">ACTIVE CONTRIBUTION GRID</h4>
 <p align="center">
-  <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-readme-stats.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&icon_color=00E5FF&text_bold=false" width="49%" alt="GitHub Profile Stats" />
-  </a>
-  <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=donut&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&langs_count=5" width="49%" alt="GitHub Top Languages" />
-  </a>
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/github-contribution-grid-snake/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Snake Grid" />
 </p>
 
 <p align="center">
   <a href="https://github.com/TheCreativeCodeFlow">
-    <img src="https://streak-stats.demolab.com?user=TheCreativeCodeFlow&theme=dark&background=030508&border=0F172A&ring=00E5FF&fire=FF9100&currStreakNum=00FF87&sideNums=F1F5F9&currStreakLabel=00FF87&sideLabels=64748B&dates=64748B" width="100%" alt="GitHub Contribution Streak Telemetry" />
+    <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api?username=TheCreativeCodeFlow&show_icons=true&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&icon_color=00E5FF&text_bold=false" width="49%" alt="GitHub Profile Stats" />
+  </a>
+  <a href="https://github.com/TheCreativeCodeFlow">
+    <img src="https://github-readme-stats-git-master-anuraghazra.vercel.app/api/top-langs/?username=TheCreativeCodeFlow&layout=donut&theme=dark&bg_color=030508&hide_border=false&border_color=0F172A&title_color=00FF87&text_color=64748B&langs_count=5" width="49%" alt="GitHub Top Languages" />
   </a>
 </p>
 
