@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" width="100%" height="100%">
+  <defs>
+    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
+    </pattern>
+    <style>
+      .bg { fill: #030508; stroke: #0F172A; stroke-width: 1; }
+      .layer-line { stroke: #0F172A; stroke-width: 1.5; stroke-dasharray: 4,4; }
+      .wire-passive { stroke: #1E293B; stroke-width: 1; fill: none; opacity: 0.4; }
+      .wire-active-green { stroke: #00FF87; stroke-width: 1.2; fill: none; opacity: 0.7; }
+      .wire-active-cyan { stroke: #00E5FF; stroke-width: 1.2; fill: none; opacity: 0.7; }
+      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #64748B; letter-spacing: 2px; }
+      .layer-title { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 600; fill: #64748B; letter-spacing: 1px; }
+      .node-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #F1F5F9; }
+      .node-bg { fill: #080B10; stroke: #1E293B; stroke-width: 1.5; }
+      .accent-green { fill: #00FF87; }
+      .accent-cyan { fill: #00E5FF; }
+      .accent-amber { fill: #FF9100; }
+      .accent-blue { fill: #38BDF8; }
+      .spec-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="270" rx="8" class="bg" />
+  <rect width="800" height="270" rx="8" fill="url(#dot-grid)" />
+
+  <!-- Top System Header -->
+  <text x="30" y="35" class="title-main">TECHNICAL CONSTELLATION // DATA &amp; PIPELINE FLOW</text>
+  <line x1="30" y1="45" x2="770" y2="45" stroke="#0F172A" stroke-width="1.5" />
+
+  <!-- Constellation Integration Wires -->
+  <!-- Next.js to Node.js (Active green) -->
+  <path d="M 160 95 C 160 105, 160 105, 160 115" class="wire-active-green" />
+  <!-- Node.js to PostgreSQL (Active green) -->
+  <path d="M 160 145 C 160 155, 160 155, 160 165" class="wire-active-green" />
+  <!-- PostgreSQL to Docker (Active green) -->
+  <path d="M 160 195 C 160 205, 160 205, 160 215" class="wire-active-green" />
+
+  <!-- React to Express (Active cyan) -->
+  <path d="M 320 95 C 320 105, 640 105, 640 115" class="wire-active-cyan" />
+  <!-- Express to Supabase (Active cyan) -->
+  <path d="M 640 145 C 640 155, 480 155, 480 165" class="wire-active-cyan" />
+  <!-- Supabase to pnpm (Active cyan) -->
+  <path d="M 480 195 C 480 205, 480 205, 480 215" class="wire-active-cyan" />
+
+  <!-- Passive Wires -->
+  <!-- React to Node.js -->
+  <path d="M 320 95 C 320 105, 160 105, 160 115" class="wire-passive" />
+  <!-- GSAP to Spring Boot -->
+  <path d="M 480 95 C 480 105, 320 105, 320 115" class="wire-passive" />
+  <!-- Tailwind to FastAPI -->
+  <path d="M 640 95 C 640 105, 480 105, 480 115" class="wire-passive" />
+  <!-- Spring Boot to MySQL -->
+  <path d="M 320 145 C 320 155, 640 155, 640 165" class="wire-passive" />
+  <!-- FastAPI to MongoDB -->
+  <path d="M 480 145 C 480 155, 320 155, 320 165" class="wire-passive" />
+  <!-- MongoDB to Turborepo -->
+  <path d="M 320 195 C 320 205, 320 205, 320 215" class="wire-passive" />
+  <!-- MySQL to Git -->
+  <path d="M 640 195 C 640 205, 640 205, 640 215" class="wire-passive" />
+
+
+  <!-- LAYER 1: CLIENT ENGINE -->
+  <line x1="30" y1="80" x2="690" y2="80" class="layer-line" />
+  <text x="30" y="73" class="layer-title">L1 / CLIENT RUNTIME</text>
+  <text x="700" y="73" class="spec-text">[EDGE_DOM_RENDER]</text>
+
+  <!-- Next.js Node -->
+  <rect x="110" y="65" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="125" cy="80" r="4.5" class="accent-green" />
+  <text x="138" y="83" class="node-text">Next.js</text>
+
+  <!-- React Node -->
+  <rect x="270" y="65" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="285" cy="80" r="4.5" class="accent-green" />
+  <text x="298" y="83" class="node-text">React.js</text>
+
+  <!-- Framer Motion Node -->
+  <rect x="430" y="65" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="445" cy="80" r="4.5" class="accent-green" />
+  <text x="458" y="83" class="node-text">GSAP/Motion</text>
+
+  <!-- Tailwind Node -->
+  <rect x="590" y="65" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="605" cy="80" r="4.5" class="accent-green" />
+  <text x="618" y="83" class="node-text">TailwindCSS</text>
+
+
+  <!-- LAYER 2: SERVICES & RUNTIME -->
+  <line x1="30" y1="130" x2="690" y2="130" class="layer-line" />
+  <text x="30" y="123" class="layer-title">L2 / LOGIC ENGINE [APIS]</text>
+  <text x="700" y="123" class="spec-text">[HTTP_PORT_9000]</text>
+
+  <!-- Node.js Node -->
+  <rect x="110" y="115" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="125" cy="130" r="4.5" class="accent-cyan" />
+  <text x="138" y="133" class="node-text">Node.js/TS</text>
+
+  <!-- Spring Boot -->
+  <rect x="270" y="115" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="285" cy="130" r="4.5" class="accent-cyan" />
+  <text x="298" y="133" class="node-text">Spring Boot</text>
+
+  <!-- FastAPI / Flask -->
+  <rect x="430" y="115" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="445" cy="130" r="4.5" class="accent-cyan" />
+  <text x="458" y="133" class="node-text">FastAPI/Flask</text>
+
+  <!-- Express -->
+  <rect x="590" y="115" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="605" cy="130" r="4.5" class="accent-cyan" />
+  <text x="618" y="133" class="node-text">Express APIs</text>
+
+
+  <!-- LAYER 3: STORAGE & SCHEMAS -->
+  <line x1="30" y1="180" x2="690" y2="180" class="layer-line" />
+  <text x="30" y="173" class="layer-title">L3 / STORAGE &amp; SCHEMAS</text>
+  <text x="700" y="173" class="spec-text">[TRANS_COMMIT_DB]</text>
+
+  <!-- PostgreSQL -->
+  <rect x="110" y="165" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="125" cy="180" r="4.5" class="accent-amber" />
+  <text x="138" y="183" class="node-text">PostgreSQL</text>
+
+  <!-- MongoDB -->
+  <rect x="270" y="165" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="285" cy="180" r="4.5" class="accent-amber" />
+  <text x="298" y="183" class="node-text">MongoDB</text>
+
+  <!-- Supabase -->
+  <rect x="430" y="165" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="445" cy="180" r="4.5" class="accent-amber" />
+  <text x="458" y="183" class="node-text">Supabase DB</text>
+
+  <!-- MySQL -->
+  <rect x="590" y="165" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="605" cy="180" r="4.5" class="accent-amber" />
+  <text x="618" y="183" class="node-text">MySQL Core</text>
+
+
+  <!-- LAYER 4: ENVIRONMENT & WORKSPACE -->
+  <line x1="30" y1="230" x2="690" y2="230" class="layer-line" />
+  <text x="30" y="223" class="layer-title">L4 / ENVIRONMENT &amp; MONOREPO</text>
+  <text x="700" y="223" class="spec-text">[ISOLATION_DOCKER]</text>
+
+  <!-- Docker -->
+  <rect x="110" y="215" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="125" cy="230" r="4.5" class="accent-blue" />
+  <text x="138" y="233" class="node-text">Docker Daemon</text>
+
+  <!-- Turborepo -->
+  <rect x="270" y="215" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="285" cy="230" r="4.5" class="accent-blue" />
+  <text x="298" y="233" class="node-text">Turborepo</text>
+
+  <!-- pnpm -->
+  <rect x="430" y="215" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="445" cy="230" r="4.5" class="accent-blue" />
+  <text x="458" y="233" class="node-text">pnpm workspace</text>
+
+  <!-- Git / Shell -->
+  <rect x="590" y="215" width="100" height="30" rx="4" class="node-bg" />
+  <circle cx="605" cy="230" r="4.5" class="accent-blue" />
+  <text x="618" y="233" class="node-text">Git &amp; Zsh</text>
+</svg>

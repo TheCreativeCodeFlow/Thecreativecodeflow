@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
+    </pattern>
+    <style>
+      .bg { fill: #030508; stroke: #0F172A; stroke-width: 1; }
+      .box { fill: #080B10; stroke: #1E293B; stroke-width: 1.5; }
+      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #64748B; letter-spacing: 2px; }
+      .title-box { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #F1F5F9; }
+      .text-box { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }
+      .node-tag { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; font-weight: bold; }
+      .accent-green { fill: #00FF87; }
+      .accent-cyan { fill: #00E5FF; }
+      .accent-amber { fill: #FF9100; }
+      .line-connect { stroke: #1E293B; stroke-width: 1.5; fill: none; }
+      .line-active { stroke: #00E5FF; stroke-width: 1.5; stroke-dasharray: 3,3; fill: none; }
+      .marker-cap { fill: #1E293B; }
+      .marker-active { fill: #00E5FF; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 7 5 L 0 8.5 z" class="marker-cap" />
+    </marker>
+    <marker id="arrow-active" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 7 5 L 0 8.5 z" class="marker-active" />
+    </marker>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="200" rx="8" class="bg" />
+  <rect width="800" height="200" rx="8" fill="url(#dot-grid)" />
+
+  <!-- Top Header -->
+  <text x="30" y="30" class="title-main">FEATURED BUILD // SCHEDULER SYSTEM TOPOLOGY</text>
+  <line x1="30" y1="40" x2="770" y2="40" stroke="#0F172A" stroke-width="1.5" />
+
+  <!-- Connections -->
+  <!-- Client to Orchestrator -->
+  <path d="M 140 110 L 190 110" class="line-connect" marker-end="url(#arrow)" />
+  <!-- Orchestrator to Storage/Queue -->
+  <path d="M 330 110 L 380 110" class="line-connect" marker-end="url(#arrow)" />
+  <!-- Storage/Queue to Workers -->
+  <path d="M 500 110 L 550 110" class="line-connect" marker-end="url(#arrow)" />
+  <!-- Workers back to Dashboard (SSE) -->
+  <path d="M 640 150 L 640 175 L 260 175 L 260 150" class="line-active" marker-end="url(#arrow-active)" />
+
+  <!-- BOX 1: CLIENT TRIGGER -->
+  <rect x="30" y="65" width="110" height="85" rx="5" class="box" />
+  <rect x="30" y="65" width="110" height="5" rx="2" class="accent-green" />
+  <text x="40" y="83" class="title-box">HTTP Trigger</text>
+  <text x="40" y="98" class="node-tag">[SCHED_REQ]</text>
+  <text x="40" y="115" class="text-box">➔ REST API Payload</text>
+  <text x="40" y="130" class="text-box">➔ SSE Event Stream</text>
+
+  <!-- BOX 2: SCHEDULER CORE -->
+  <rect x="190" y="65" width="140" height="85" rx="5" class="box" />
+  <rect x="190" y="65" width="140" height="5" rx="2" class="accent-cyan" />
+  <text x="200" y="83" class="title-box">Queue Manager</text>
+  <text x="200" y="98" class="node-tag">[DAEMON_MAIN]</text>
+  <text x="200" y="115" class="text-box">➔ Job Partition Broker</text>
+  <text x="200" y="130" class="text-box">➔ Concurrency Guard</text>
+
+  <!-- BOX 3: AUDITED STORAGE -->
+  <rect x="380" y="65" width="120" height="85" rx="5" class="box" />
+  <rect x="380" y="65" width="120" height="5" rx="2" class="accent-amber" />
+  <text x="390" y="83" class="title-box">State Store</text>
+  <text x="390" y="98" class="node-tag">[DB_SCHED_MUTEX]</text>
+  <text x="390" y="115" class="text-box">➔ Job Queue Storage</text>
+  <text x="390" y="130" class="text-box">➔ Dead-Letter logs</text>
+
+  <!-- BOX 4: WORKER FLEET -->
+  <rect x="550" y="65" width="180" height="85" rx="5" class="box" />
+  <rect x="550" y="65" width="180" height="5" rx="2" fill="#38BDF8" />
+  <text x="560" y="83" class="title-box">Worker Fleet</text>
+  <text x="560" y="98" class="node-tag">[POOL_DAEMON_EXEC]</text>
+  <text x="560" y="115" class="text-box">➔ Worker #1 • ACTIVE [Green]</text>
+  <text x="560" y="130" class="text-box">➔ Worker #2 • ACTIVE [Green]</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
+    </pattern>
+    <style>
+      .bg { fill: #030508; stroke: #0F172A; stroke-width: 1; }
+      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #64748B; letter-spacing: 2px; }
+      .console-log { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #64748B; }
+      .console-time { fill: #00E5FF; }
+      .console-success { fill: #00FF87; font-weight: bold; }
+      .metric-box { fill: #080B10; stroke: #1E293B; stroke-width: 1.5; }
+      .metric-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; font-weight: 700; fill: #F1F5F9; }
+      .metric-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; letter-spacing: 0.5px; }
+      .accent-green { stroke: #00FF87; }
+      .accent-amber { stroke: #FF9100; }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="200" rx="8" class="bg" />
+  <rect width="800" height="200" rx="8" fill="url(#dot-grid)" />
+
+  <!-- Top Header -->
+  <text x="30" y="30" class="title-main">SYSTEM TELEMETRY // INSTANCE DIAGNOSTICS</text>
+  <line x1="30" y1="40" x2="770" y2="40" stroke="#0F172A" stroke-width="1.5" />
+
+  <!-- Terminal Console (Left) -->
+  <text x="30" y="70" class="console-log"><tspan class="console-time">[22:18:12]</tspan> BOOT: Deployed core profile 'TheCreativeCodeFlow' ... OK</text>
+  <text x="30" y="90" class="console-log"><tspan class="console-time">[22:18:13]</tspan> WEB: Mounting Next.js client router hooks ... <tspan class="console-success">ONLINE</tspan></text>
+  <text x="30" y="110" class="console-log"><tspan class="console-time">[22:18:14]</tspan> CORE: Initializing Job Scheduler thread-pools ... <tspan class="console-success">ACTIVE</tspan></text>
+  <text x="30" y="130" class="console-log"><tspan class="console-time">[22:18:15]</tspan> DATA: Linking PostgreSQL DB replica pools ... 99.9% uptime</text>
+  <text x="30" y="150" class="console-log"><tspan class="console-time">[22:18:16]</tspan> STATE: System diagnostic routine complete. Code: <tspan class="console-success">OPTIMAL</tspan></text>
+
+  <!-- Divider -->
+  <line x1="430" y1="55" x2="430" y2="175" stroke="#0F172A" stroke-width="1.5" />
+
+  <!-- CPU Wave Chart (Middle) -->
+  <rect x="450" y="65" width="140" height="90" rx="4" class="metric-box" />
+  <!-- Grid background lines -->
+  <line x1="450" y1="95" x2="590" y2="95" stroke="#1E293B" stroke-width="0.5" />
+  <line x1="450" y1="125" x2="590" y2="125" stroke="#1E293B" stroke-width="0.5" />
+  <line x1="485" y1="65" x2="485" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
+  <line x1="520" y1="65" x2="520" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
+  <line x1="555" y1="65" x2="555" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
+  <!-- CPU Wave line -->
+  <path d="M 450 135 L 470 120 L 490 140 L 510 90 L 530 110 L 550 75 L 570 130 L 590 85" fill="none" stroke="#00FF87" stroke-width="2" />
+  <path d="M 450 135 L 470 120 L 490 140 L 510 90 L 530 110 L 550 75 L 570 130 L 590 85 L 590 155 L 450 155 Z" fill="#00FF87" fill-opacity="0.05" />
+  <text x="520" y="145" class="metric-lbl" text-anchor="middle">CPU LOAD</text>
+
+  <!-- Metric Panels (Right) -->
+  <!-- Box 1 (INTEGRITY) -->
+  <rect x="605" y="65" width="75" height="90" rx="4" class="metric-box" />
+  <circle cx="642" cy="100" r="15" fill="none" stroke="#1E293B" stroke-width="2.5" />
+  <circle cx="642" cy="100" r="15" fill="none" class="accent-green" stroke-width="2.5" stroke-dasharray="94" stroke-dashoffset="0" />
+  <text x="642" y="104" class="metric-val" text-anchor="middle">100%</text>
+  <text x="642" y="145" class="metric-lbl" text-anchor="middle">INTEGRITY</text>
+
+  <!-- Box 2 (MESH STATE) -->
+  <rect x="695" y="65" width="75" height="90" rx="4" class="metric-box" />
+  <circle cx="732" cy="100" r="15" fill="none" stroke="#1E293B" stroke-width="2.5" />
+  <circle cx="732" cy="100" r="15" fill="none" class="accent-amber" stroke-width="2.5" stroke-dasharray="94" stroke-dashoffset="10" />
+  <text x="732" y="104" class="metric-val" text-anchor="middle">v3.1.0</text>
+  <text x="732" y="145" class="metric-lbl" text-anchor="middle">SYS VER</text>
+</svg>
