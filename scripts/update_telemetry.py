@@ -300,8 +300,8 @@ def generate_svg(stats):
   </circle>
   <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // SYSTEM_NODE_01</text>
   <text x="500" y="26" class="hud-text" text-anchor="start">
-    PORT: <tspan class="hud-text-bright">9000</tspan> &nbsp;▪&nbsp; 
-    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &nbsp;▪&nbsp; 
+    PORT: <tspan class="hud-text-bright">9000</tspan> &#160;▪&#160; 
+    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &#160;▪&#160; 
     STABLE: <tspan class="hud-text-bright">TRUE</tspan>
   </text>
   <text x="775" y="26" class="hud-text" text-anchor="end">SYNC_TIME: {timestamp}</text>

@@ -43,11 +43,11 @@
   </circle>
   <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // SYSTEM_NODE_01</text>
   <text x="500" y="26" class="hud-text" text-anchor="start">
-    PORT: <tspan class="hud-text-bright">9000</tspan> &nbsp;▪&nbsp; 
-    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &nbsp;▪&nbsp; 
+    PORT: <tspan class="hud-text-bright">9000</tspan> &#160;▪&#160; 
+    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &#160;▪&#160; 
     STABLE: <tspan class="hud-text-bright">TRUE</tspan>
   </text>
-  <text x="775" y="26" class="hud-text" text-anchor="end">SYNC_TIME: 2026-08-22 15:38:28 UTC</text>
+  <text x="775" y="26" class="hud-text" text-anchor="end">SYNC_TIME: 2026-08-22 15:44:44 UTC</text>
   <line x1="20" y1="38" x2="780" y2="38" stroke="#0F172A" stroke-width="1.5" />
 
   <!-- LEFT PANEL: Core Metrics (X: 20 to 260) -->
@@ -57,7 +57,7 @@
     <!-- Mini Folder Graphic -->
     <path d="M 12 14 L 18 14 L 20 17 L 26 17 L 26 28 L 12 28 Z" fill="none" stroke="#00E5FF" stroke-width="1" />
     <text x="34" y="18" class="card-title">SYS.REPOSITORIES</text>
-    <text x="34" y="32" class="card-val">46</text>
+    <text x="34" y="32" class="card-val">45</text>
     <rect x="98" y="10" width="4" height="4" class="accent-cyan" />
   </g>
 
@@ -79,7 +79,7 @@
     <!-- Mini Star Graphic -->
     <path d="M 18 12 L 20 16 L 24 16 L 21 19 L 22 23 L 18 21 L 14 23 L 15 19 L 12 16 L 16 16 Z" fill="none" stroke="#00FF87" stroke-width="1" />
     <text x="34" y="18" class="card-title">SYS.STARS_TOTAL</text>
-    <text x="34" y="32" class="card-val">51</text>
+    <text x="34" y="32" class="card-val">55</text>
     <rect x="98" y="10" width="4" height="4" class="accent-green" />
   </g>
 
@@ -90,7 +90,7 @@
     <path d="M 14 13 L 14 17 A 4 4 0 0 0 18 21 L 18 26 M 22 13 L 22 17 A 4 4 0 0 1 18 21" fill="none" stroke="#BD00FF" stroke-width="1" />
     <circle cx="18" cy="27" r="1.5" fill="#BD00FF" />
     <text x="34" y="18" class="card-title">SYS.STORED_FORKS</text>
-    <text x="34" y="32" class="card-val">7</text>
+    <text x="34" y="32" class="card-val">2</text>
     <rect x="98" y="10" width="4" height="4" class="accent-purple" />
   </g>
   
@@ -118,22 +118,22 @@
     <line x1="10" y1="115" x2="235" y2="115" stroke="#1e293b" stroke-width="1" />
 
     <!-- Wave Chart Fill and Line -->
-    <path d="M 10.00 103.80 L 24.66 115.00 L 39.32 109.40 L 53.98 88.40 L 68.64 108.00 L 83.30 105.20 L 97.96 68.80 L 112.62 106.60 L 127.28 45.00 L 141.94 85.60 L 156.60 73.00 L 171.26 82.80 L 185.92 46.40 L 200.58 95.40 L 215.24 87.00 L 229.90 82.80 L 229.90 115.00 L 10.00 115.00 Z" fill="url(#wave-grad)" />
-    <path d="M 10.00 103.80 L 24.66 115.00 L 39.32 109.40 L 53.98 88.40 L 68.64 108.00 L 83.30 105.20 L 97.96 68.80 L 112.62 106.60 L 127.28 45.00 L 141.94 85.60 L 156.60 73.00 L 171.26 82.80 L 185.92 46.40 L 200.58 95.40 L 215.24 87.00 L 229.90 82.80" fill="none" stroke="#00FF87" stroke-width="1.5" />
+    <path d="M 10.00 80.00 L 24.66 45.00 L 39.32 60.00 L 53.98 75.00 L 68.64 70.00 L 83.30 85.00 L 97.96 70.00 L 112.62 70.00 L 127.28 60.00 L 141.94 65.00 L 156.60 70.00 L 171.26 60.00 L 185.92 85.00 L 200.58 70.00 L 215.24 60.00 L 229.90 80.00 L 229.90 115.00 L 10.00 115.00 Z" fill="url(#wave-grad)" />
+    <path d="M 10.00 80.00 L 24.66 45.00 L 39.32 60.00 L 53.98 75.00 L 68.64 70.00 L 83.30 85.00 L 97.96 70.00 L 112.62 70.00 L 127.28 60.00 L 141.94 65.00 L 156.60 70.00 L 171.26 60.00 L 185.92 85.00 L 200.58 70.00 L 215.24 60.00 L 229.90 80.00" fill="none" stroke="#00FF87" stroke-width="1.5" />
     
     <!-- Sparkles on Peak -->
-    <circle cx="229.90" cy="82.80" r="2" fill="#00FF87" />
+    <circle cx="229.90" cy="80.00" r="2" fill="#00FF87" />
 
     <!-- Streak Data Grid -->
     <g transform="translate(0, 130)">
       <text x="0" y="10" class="stat-lbl">CURRENT STREAK</text>
-      <text x="0" y="22" class="stat-val" style="fill: #00E5FF; font-size: 11px;">5 DAYS</text>
+      <text x="0" y="22" class="stat-val" style="fill: #00E5FF; font-size: 11px;">3 DAYS</text>
 
       <text x="90" y="10" class="stat-lbl">LONGEST STREAK</text>
       <text x="90" y="22" class="stat-val">17 DAYS</text>
 
       <text x="180" y="10" class="stat-lbl">ACTIVE DAYS</text>
-      <text x="180" y="22" class="stat-val">144 / 365</text>
+      <text x="180" y="22" class="stat-val">142 / 365</text>
     </g>
   </g>
 
@@ -144,31 +144,31 @@
 
     <!-- Languages loop -->
     <g transform="translate(0, 25)">
-      <!-- Python Bar -->
+      <!-- TypeScript Bar -->
       <g transform="translate(0, 0)">
-        <text x="0" y="8" class="lang-lbl">Python</text>
-        <text x="240" y="8" class="lang-pct" text-anchor="end">88.5%</text>
+        <text x="0" y="8" class="lang-lbl">TypeScript</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">74.2%</text>
         <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="212" height="8" rx="2" fill="#3572A5">
-          <animate attributeName="width" from="0" to="212" dur="1.2s" fill="freeze" />
+        <rect x="0" y="14" width="178" height="8" rx="2" fill="#3178c6">
+          <animate attributeName="width" from="0" to="178" dur="1.2s" fill="freeze" />
         </rect>
       </g>
-      <!-- TypeScript Bar -->
+      <!-- Python Bar -->
       <g transform="translate(0, 45)">
-        <text x="0" y="8" class="lang-lbl">TypeScript</text>
-        <text x="240" y="8" class="lang-pct" text-anchor="end">8.8%</text>
+        <text x="0" y="8" class="lang-lbl">Python</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">19.4%</text>
         <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="21" height="8" rx="2" fill="#3178c6">
-          <animate attributeName="width" from="0" to="21" dur="1.2s" fill="freeze" />
+        <rect x="0" y="14" width="46" height="8" rx="2" fill="#3572A5">
+          <animate attributeName="width" from="0" to="46" dur="1.2s" fill="freeze" />
         </rect>
       </g>
       <!-- JavaScript Bar -->
       <g transform="translate(0, 90)">
         <text x="0" y="8" class="lang-lbl">JavaScript</text>
-        <text x="240" y="8" class="lang-pct" text-anchor="end">0.9%</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">6.5%</text>
         <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="2" height="8" rx="2" fill="#f1e05a">
-          <animate attributeName="width" from="0" to="2" dur="1.2s" fill="freeze" />
+        <rect x="0" y="14" width="15" height="8" rx="2" fill="#f1e05a">
+          <animate attributeName="width" from="0" to="15" dur="1.2s" fill="freeze" />
         </rect>
       </g>
     </g>
