@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+  <defs>
+    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
+    </pattern>
+    <linearGradient id="wave-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00FF87" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00FF87" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="panel-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#030508"/>
+      <stop offset="100%" stop-color="#070b12"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#panel-grad); stroke: #0f172a; stroke-width: 1.5; }
+      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00E5FF; letter-spacing: 2px; }
+      .hud-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; letter-spacing: 0.5px; }
+      .hud-text-bright { fill: #00FF87; font-weight: bold; }
+      .card-border { fill: #050810; stroke: #1e293b; stroke-width: 1; }
+      .card-title { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; font-weight: 700; fill: #64748B; letter-spacing: 0.5px; }
+      .card-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 16px; font-weight: 800; fill: #F1F5F9; }
+      .accent-cyan { fill: #00E5FF; }
+      .accent-green { fill: #00FF87; }
+      .accent-amber { fill: #FF9100; }
+      .accent-purple { fill: #BD00FF; }
+      .sec-title { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 700; fill: #64748B; letter-spacing: 1px; }
+      .chart-grid { stroke: #1e293b; stroke-width: 0.5; stroke-dasharray: 2,2; }
+      .stat-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }
+      .stat-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #F1F5F9; }
+      .lang-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #94A3B8; }
+      .lang-pct { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }
+      .bar-track { fill: #080d16; stroke: #1e293b; stroke-width: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="240" rx="8" class="bg" />
+  <rect width="800" height="240" rx="8" fill="url(#dot-grid)" />
+
+  <!-- Top Header HUD -->
+  <circle cx="25" cy="24" r="4" fill="#00FF87">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // SYSTEM_NODE_01</text>
+  <text x="500" y="26" class="hud-text" text-anchor="start">
+    PORT: <tspan class="hud-text-bright">9000</tspan> &nbsp;▪&nbsp; 
+    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &nbsp;▪&nbsp; 
+    STABLE: <tspan class="hud-text-bright">TRUE</tspan>
+  </text>
+  <text x="775" y="26" class="hud-text" text-anchor="end">SYNC_TIME: 2026-08-22 15:36:30 UTC</text>
+  <line x1="20" y1="38" x2="780" y2="38" stroke="#0F172A" stroke-width="1.5" />
+
+  <!-- LEFT PANEL: Core Metrics (X: 20 to 260) -->
+  <!-- Card 1: Repositories -->
+  <g transform="translate(20, 50)">
+    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #00E5FF; stroke-opacity: 0.5;" />
+    <!-- Mini Folder Graphic -->
+    <path d="M 12 14 L 18 14 L 20 17 L 26 17 L 26 28 L 12 28 Z" fill="none" stroke="#00E5FF" stroke-width="1" />
+    <text x="34" y="18" class="card-title">SYS.REPOSITORIES</text>
+    <text x="34" y="32" class="card-val">45</text>
+    <rect x="98" y="10" width="4" height="4" class="accent-cyan" />
+  </g>
+
+  <!-- Card 2: Followers -->
+  <g transform="translate(148, 50)">
+    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #FF9100; stroke-opacity: 0.5;" />
+    <!-- Mini Connections Graphic -->
+    <circle cx="16" cy="18" r="2.5" fill="none" stroke="#FF9100" stroke-width="1" />
+    <circle cx="24" cy="24" r="2.5" fill="none" stroke="#FF9100" stroke-width="1" />
+    <line x1="18.5" y1="20.5" x2="21.5" y2="21.5" stroke="#FF9100" stroke-width="1" />
+    <text x="34" y="18" class="card-title">SYS.FOLLOWERS</text>
+    <text x="34" y="32" class="card-val">10</text>
+    <rect x="98" y="10" width="4" height="4" class="accent-amber" />
+  </g>
+
+  <!-- Card 3: Profile Stars -->
+  <g transform="translate(20, 102)">
+    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #00FF87; stroke-opacity: 0.5;" />
+    <!-- Mini Star Graphic -->
+    <path d="M 18 12 L 20 16 L 24 16 L 21 19 L 22 23 L 18 21 L 14 23 L 15 19 L 12 16 L 16 16 Z" fill="none" stroke="#00FF87" stroke-width="1" />
+    <text x="34" y="18" class="card-title">SYS.STARS_TOTAL</text>
+    <text x="34" y="32" class="card-val">55</text>
+    <rect x="98" y="10" width="4" height="4" class="accent-green" />
+  </g>
+
+  <!-- Card 4: Stored Forks -->
+  <g transform="translate(148, 102)">
+    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #BD00FF; stroke-opacity: 0.5;" />
+    <!-- Mini Fork Graphic -->
+    <path d="M 14 13 L 14 17 A 4 4 0 0 0 18 21 L 18 26 M 22 13 L 22 17 A 4 4 0 0 1 18 21" fill="none" stroke="#BD00FF" stroke-width="1" />
+    <circle cx="18" cy="27" r="1.5" fill="#BD00FF" />
+    <text x="34" y="18" class="card-title">SYS.STORED_FORKS</text>
+    <text x="34" y="32" class="card-val">2</text>
+    <rect x="98" y="10" width="4" height="4" class="accent-purple" />
+  </g>
+  
+  <!-- Environment indicators at the bottom left -->
+  <g transform="translate(20, 160)">
+    <rect width="240" height="60" rx="4" class="card-border" />
+    <text x="15" y="18" class="hud-text">ENV_RUNTIME: <tspan class="hud-text-bright">NODE v20</tspan></text>
+    <text x="15" y="33" class="hud-text">SYS_ENCRYPTION: <tspan class="hud-text-bright">TLS_1.3</tspan></text>
+    <text x="15" y="48" class="hud-text">CORE_ACCOUNT: <tspan class="hud-text-bright">ACTIVE</tspan></text>
+    
+    <text x="130" y="18" class="hud-text">IP_SOCKET: <tspan class="hud-text-bright">RESOLVED</tspan></text>
+    <text x="130" y="33" class="hud-text">FRAMEWORK: <tspan class="hud-text-bright">ENGINEERING</tspan></text>
+    <text x="130" y="48" class="hud-text">SYS_STATUS: <tspan class="hud-text-bright" fill="#00FF87">SECURE</tspan></text>
+  </g>
+
+  <!-- MIDDLE PANEL: Active Streak Engine (X: 280 to 520) -->
+  <g transform="translate(280, 50)">
+    <text x="0" y="8" class="sec-title">ACTIVE STREAK ENGINE</text>
+    <line x1="0" y1="14" x2="240" y2="14" stroke="#0F172A" stroke-width="1" />
+
+    <!-- Wave Chart Grid -->
+    <line x1="10" y1="45" x2="235" y2="45" class="chart-grid" />
+    <line x1="10" y1="75" x2="235" y2="75" class="chart-grid" />
+    <line x1="10" y1="105" x2="235" y2="105" class="chart-grid" />
+    <line x1="10" y1="115" x2="235" y2="115" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Wave Chart Fill and Line -->
+    <path d="M 10.00 80.00 L 24.66 45.00 L 39.32 60.00 L 53.98 75.00 L 68.64 70.00 L 83.30 85.00 L 97.96 70.00 L 112.62 70.00 L 127.28 60.00 L 141.94 65.00 L 156.60 70.00 L 171.26 60.00 L 185.92 85.00 L 200.58 70.00 L 215.24 60.00 L 229.90 80.00 L 229.90 115.00 L 10.00 115.00 Z" fill="url(#wave-grad)" />
+    <path d="M 10.00 80.00 L 24.66 45.00 L 39.32 60.00 L 53.98 75.00 L 68.64 70.00 L 83.30 85.00 L 97.96 70.00 L 112.62 70.00 L 127.28 60.00 L 141.94 65.00 L 156.60 70.00 L 171.26 60.00 L 185.92 85.00 L 200.58 70.00 L 215.24 60.00 L 229.90 80.00" fill="none" stroke="#00FF87" stroke-width="1.5" />
+    
+    <!-- Sparkles on Peak -->
+    <circle cx="229.90" cy="80.00" r="2" fill="#00FF87" />
+
+    <!-- Streak Data Grid -->
+    <g transform="translate(0, 130)">
+      <text x="0" y="10" class="stat-lbl">CURRENT STREAK</text>
+      <text x="0" y="22" class="stat-val" style="fill: #00E5FF; font-size: 11px;">3 DAYS</text>
+
+      <text x="90" y="10" class="stat-lbl">LONGEST STREAK</text>
+      <text x="90" y="22" class="stat-val">17 DAYS</text>
+
+      <text x="180" y="10" class="stat-lbl">ACTIVE DAYS</text>
+      <text x="180" y="22" class="stat-val">142 / 365</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANEL: Language Distribution (X: 540 to 780) -->
+  <g transform="translate(540, 50)">
+    <text x="0" y="8" class="sec-title">PRIMARY LANGUAGE DISTRIBUTION</text>
+    <line x1="0" y1="14" x2="240" y2="14" stroke="#0F172A" stroke-width="1" />
+
+    <!-- Languages loop -->
+    <g transform="translate(0, 25)">
+      <!-- TypeScript Bar -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="8" class="lang-lbl">TypeScript</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">74.2%</text>
+        <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="178" height="8" rx="2" fill="#3178c6">
+          <animate attributeName="width" from="0" to="178" dur="1.2s" fill="freeze" />
+        </rect>
+      </g>
+      <!-- Python Bar -->
+      <g transform="translate(0, 45)">
+        <text x="0" y="8" class="lang-lbl">Python</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">19.4%</text>
+        <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="46" height="8" rx="2" fill="#3572A5">
+          <animate attributeName="width" from="0" to="46" dur="1.2s" fill="freeze" />
+        </rect>
+      </g>
+      <!-- JavaScript Bar -->
+      <g transform="translate(0, 90)">
+        <text x="0" y="8" class="lang-lbl">JavaScript</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">6.5%</text>
+        <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="15" height="8" rx="2" fill="#f1e05a">
+          <animate attributeName="width" from="0" to="15" dur="1.2s" fill="freeze" />
+        </rect>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -135,26 +135,9 @@ SYS_EVENTS ➔
   <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/github-contribution-grid-snake/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Snake Grid" />
 </p>
 
-```text
-┌──────────────────────────────────────────────────────────┐
-│ GITHUB CORE TELEMETRY // SYSTEM NODE                     │
-├──────────────────────────────┬───────────────────────────┤
-│ Repositories: 45             │ Followers: 10             │
-│ Profile Stars: 55            │ Stored Forks: 2            │
-│ Core Account: Active         │ Environment: Stable       │
-├──────────────────────────────┴───────────────────────────┤
-│ ACTIVE STREAK ENGINE                                     │
-├──────────────────────────────┬───────────────────────────┤
-│ Current Streak: 3            │ Longest Streak: 17         │
-│ Total Active Days: 142       │ Registry: Verified        │
-├──────────────────────────────┴───────────────────────────┤
-│ PRIMARY LANGUAGE DISTRIBUTION                             │
-├──────────────────────────────────────────────────────────┤
-│  TypeScript   [██████████████░░░░░░]  72%  │
-│  Python       [████░░░░░░░░░░░░░░░░]  24%  │
-│  JavaScript   [░░░░░░░░░░░░░░░░░░░░]   3%  │
-└──────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./assets/github_telemetry.svg" width="100%" alt="GitHub Core Telemetry" />
+</p>
 
 ---
 
