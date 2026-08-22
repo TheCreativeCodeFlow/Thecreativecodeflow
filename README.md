@@ -1,7 +1,7 @@
 # SYSTEM // ENGINEERING PROFILE
 
 <p align="center">
-  <img src="./assets/hacker_typewriter.svg" width="100%" alt="Hacker Console Typing Effect" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/hacker_typewriter.svg" width="100%" alt="Hacker Console Typing Effect" />
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 `BUILDING ➔ LEARNING ➔ SHIPPING ➔ REPEATING`
 
 <p align="center">
-  <img src="./assets/system_map.svg" width="100%" alt="System Architecture Flow Map" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/system_map.svg" width="100%" alt="System Architecture Flow Map" />
 </p>
 
 ---
@@ -56,7 +56,7 @@ Leveraging monorepos (Turborepo), clean workspace package managers (pnpm), autom
 ### 🌌 Technical Constellation
 
 <p align="center">
-  <img src="./assets/stack_constellation.svg" width="100%" alt="Layered Stack Architecture" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/stack_constellation.svg" width="100%" alt="Layered Stack Architecture" />
 </p>
 
 ---
@@ -70,7 +70,7 @@ Enqueuing, scheduling, partitioning, and auditing asynchronous tasks predictably
 
 #### System Architecture
 <p align="center">
-  <img src="./assets/scheduler_arch.svg" width="100%" alt="Distributed Job Scheduler Architecture" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/scheduler_arch.svg" width="100%" alt="Distributed Job Scheduler Architecture" />
 </p>
 
 #### The Implementation
@@ -127,7 +127,7 @@ SYS_EVENTS ➔
 ### 📊 Telemetry &amp; System Diagnostics
 
 <p align="center">
-  <img src="./assets/system_diagnostics.svg" width="100%" alt="System Diagnostics Log &amp; Metrics" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/system_diagnostics.svg" width="100%" alt="System Diagnostics Log &amp; Metrics" />
 </p>
 
 <h4 align="center">ACTIVE CONTRIBUTION GRID</h4>
@@ -136,7 +136,7 @@ SYS_EVENTS ➔
 </p>
 
 <p align="center">
-  <img src="./assets/github_telemetry.svg" width="100%" alt="GitHub Core Telemetry" />
+  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/github_telemetry.svg" width="100%" alt="GitHub Core Telemetry" />
 </p>
 
 ---
