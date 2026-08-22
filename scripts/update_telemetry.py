@@ -204,9 +204,60 @@ def calculate_stats(user_data, is_mock=False):
         stats["current_streak"] = 3
         stats["longest_streak"] = 17
         stats["active_days"] = 142
+        stats["total_range"] = "22 Apr 2025 - Present"
+        stats["current_range"] = "18 Aug - 20 Aug"
+        stats["longest_range"] = "4 Jun - 20 Jun"
     else:
         stats["current_streak"] = current_streak
         stats["longest_streak"] = longest_streak
+        
+        # Total contributions range
+        if len(days) > 0:
+            start_date = datetime.strptime(days[0]["date"], "%Y-%m-%d")
+            stats["total_range"] = f"{int(start_date.strftime('%d'))} {start_date.strftime('%b %Y')} - Present"
+        else:
+            stats["total_range"] = "Present"
+            
+        # Current streak range
+        current_range = ""
+        if current_streak > 0:
+            last_active_idx = None
+            for idx in range(len(days) - 1, -1, -1):
+                if days[idx]["contributionCount"] > 0:
+                    last_active_idx = idx
+                    break
+            if last_active_idx is not None:
+                start_idx = last_active_idx - current_streak + 1
+                if start_idx >= 0:
+                    s_date = datetime.strptime(days[start_idx]["date"], "%Y-%m-%d")
+                    e_date = datetime.strptime(days[last_active_idx]["date"], "%Y-%m-%d")
+                    current_range = f"{int(s_date.strftime('%d'))} {s_date.strftime('%b')} - {int(e_date.strftime('%d'))} {e_date.strftime('%b')}"
+        stats["current_range"] = current_range if current_range else "Inactive"
+        
+        # Longest streak range
+        longest_range = ""
+        best_start_idx = None
+        best_end_idx = None
+        current_start_idx = None
+        max_len = 0
+        current_len = 0
+        for idx, d in enumerate(days):
+            if d["contributionCount"] > 0:
+                if current_len == 0:
+                    current_start_idx = idx
+                current_len += 1
+                if current_len > max_len:
+                    max_len = current_len
+                    best_start_idx = current_start_idx
+                    best_end_idx = idx
+            else:
+                current_len = 0
+                
+        if best_start_idx is not None and best_end_idx is not None:
+            s_date = datetime.strptime(days[best_start_idx]["date"], "%Y-%m-%d")
+            e_date = datetime.strptime(days[best_end_idx]["date"], "%Y-%m-%d")
+            longest_range = f"{int(s_date.strftime('%d'))} {s_date.strftime('%b')} - {int(e_date.strftime('%d'))} {e_date.strftime('%b')}"
+        stats["longest_range"] = longest_range if longest_range else "Inactive"
         
     # Get last 16 weeks contributions for the wave chart
     weeks = calendar["weeks"]
@@ -228,30 +279,20 @@ def generate_svg(stats):
     stored_forks = stats["stored_forks"]
     current_streak = stats["current_streak"]
     longest_streak = stats["longest_streak"]
-    active_days = stats["active_days"]
     languages = stats["languages"]
-    week_contributions = stats["week_contributions"]
+    total_contributions = stats["total_contributions"]
+    total_range = stats["total_range"]
+    current_range = stats["current_range"]
+    longest_range = stats["longest_range"]
     
-    # Calculate wave chart coordinates (relative to the active streak engine group translate(280, 50))
-    # Available area width: 220px (X: 10 to 230), height: 75px (Y: 40 to 115)
-    max_c = max(week_contributions) if max(week_contributions) > 0 else 1
-    points = []
-    for i, c in enumerate(week_contributions):
-        x = 10 + (i * 14.66)
-        y = 115 - (c / max_c) * 70
-        points.append((x, y))
-        
-    # Build SVG path for spline
-    path_d = ""
-    if points:
-        path_d = f"M {points[0][0]:.2f} {points[0][1]:.2f}"
-        for i in range(1, len(points)):
-            path_d += f" L {points[i][0]:.2f} {points[i][1]:.2f}"
-            
-    # Area path (closed polygon for gradient fill)
-    area_d = ""
-    if points:
-        area_d = f"{path_d} L {points[-1][0]:.2f} 115.00 L {points[0][0]:.2f} 115.00 Z"
+    # Calculate ring progress (circumference is 2 * pi * 22 = 138.23)
+    # Arc path has a 40 degree gap at the top, so total arc length is 138.23 * (320 / 360) = 122.88
+    total_arc_len = 122.88
+    if longest_streak > 0:
+        progress = min(current_streak / longest_streak, 1.0)
+    else:
+        progress = 0.0
+    dash_offset = total_arc_len * (1 - progress)
         
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     
@@ -260,10 +301,6 @@ def generate_svg(stats):
     <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
     </pattern>
-    <linearGradient id="wave-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00FF87" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#00FF87" stop-opacity="0.0"/>
-    </linearGradient>
     <linearGradient id="panel-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#030508"/>
       <stop offset="100%" stop-color="#070b12"/>
@@ -281,9 +318,6 @@ def generate_svg(stats):
       .accent-amber {{ fill: #FF9100; }}
       .accent-purple {{ fill: #BD00FF; }}
       .sec-title {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 700; fill: #64748B; letter-spacing: 1px; }}
-      .chart-grid {{ stroke: #1e293b; stroke-width: 0.5; stroke-dasharray: 2,2; }}
-      .stat-lbl {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }}
-      .stat-val {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #F1F5F9; }}
       .lang-lbl {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #94A3B8; }}
       .lang-pct {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }}
       .bar-track {{ fill: #080d16; stroke: #1e293b; stroke-width: 0.5; }}
@@ -368,29 +402,38 @@ def generate_svg(stats):
     <text x="0" y="8" class="sec-title">ACTIVE STREAK ENGINE</text>
     <line x1="0" y1="14" x2="240" y2="14" stroke="#0F172A" stroke-width="1" />
 
-    <!-- Wave Chart Grid -->
-    <line x1="10" y1="45" x2="235" y2="45" class="chart-grid" />
-    <line x1="10" y1="75" x2="235" y2="75" class="chart-grid" />
-    <line x1="10" y1="105" x2="235" y2="105" class="chart-grid" />
-    <line x1="10" y1="115" x2="235" y2="115" stroke="#1e293b" stroke-width="1" />
+    <!-- Dividers -->
+    <line x1="80" y1="30" x2="80" y2="120" stroke="#0F172A" stroke-width="1" opacity="0.3" />
+    <line x1="160" y1="30" x2="160" y2="120" stroke="#0F172A" stroke-width="1" opacity="0.3" />
 
-    <!-- Wave Chart Fill and Line -->
-    <path d="{area_d}" fill="url(#wave-grad)" />
-    <path d="{path_d}" fill="none" stroke="#00FF87" stroke-width="1.5" />
-    
-    <!-- Sparkles on Peak -->
-    <circle cx="{points[-1][0]:.2f}" cy="{points[-1][1]:.2f}" r="2" fill="#00FF87" />
+    <!-- Left Column: Total Contributions -->
+    <g transform="translate(0, 20)">
+      <text x="40" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{total_contributions}</text>
+      <text x="40" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="700" fill="#94A3B8" text-anchor="middle">Total Contributions</text>
+      <text x="40" y="85" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{total_range}</text>
+    </g>
 
-    <!-- Streak Data Grid -->
-    <g transform="translate(0, 130)">
-      <text x="0" y="10" class="stat-lbl">CURRENT STREAK</text>
-      <text x="0" y="22" class="stat-val" style="fill: #00E5FF; font-size: 11px;">{current_streak} DAYS</text>
+    <!-- Middle Column: Current Streak -->
+    <g transform="translate(0, 20)">
+      <!-- Flame Icon -->
+      <path d="M 120 18 C 122.2 22 124.4 23.8 124.4 27 A 4.4 4.4 0 0 1 115.6 27 C 115.6 23.8 117.8 22 120 18 Z" fill="#FF9100" />
+      
+      <!-- Background Arc Ring -->
+      <path d="M 127.5 31.3 A 22 22 0 1 1 112.5 31.3" fill="none" stroke="#101726" stroke-width="2.5" stroke-linecap="round" />
+      
+      <!-- Active Progress Arc Ring -->
+      <path d="M 127.5 31.3 A 22 22 0 1 1 112.5 31.3" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="122.88" stroke-dashoffset="{dash_offset:.2f}" />
+      
+      <text x="120" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="800" fill="#00E5FF" text-anchor="middle">{current_streak}</text>
+      <text x="120" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="800" fill="#F1F5F9" text-anchor="middle">Current Streak</text>
+      <text x="120" y="99" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{current_range}</text>
+    </g>
 
-      <text x="90" y="10" class="stat-lbl">LONGEST STREAK</text>
-      <text x="90" y="22" class="stat-val">{longest_streak} DAYS</text>
-
-      <text x="180" y="10" class="stat-lbl">ACTIVE DAYS</text>
-      <text x="180" y="22" class="stat-val">{active_days} / 365</text>
+    <!-- Right Column: Longest Streak -->
+    <g transform="translate(0, 20)">
+      <text x="200" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{longest_streak}</text>
+      <text x="200" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="700" fill="#94A3B8" text-anchor="middle">Longest Streak</text>
+      <text x="200" y="85" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{longest_range}</text>
     </g>
   </g>
 
@@ -427,6 +470,7 @@ def generate_svg(stats):
   </g>
 </svg>"""
     return svg
+
 
 def main():
     username = "TheCreativeCodeFlow"
