@@ -294,7 +294,7 @@ def generate_svg(stats):
         progress = 0.0
     dash_offset = total_arc_len * (1 - progress)
         
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
   <defs>
@@ -310,14 +310,11 @@ def generate_svg(stats):
       .title-main {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00E5FF; letter-spacing: 2px; }}
       .hud-text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; letter-spacing: 0.5px; }}
       .hud-text-bright {{ fill: #00FF87; font-weight: bold; }}
-      .card-border {{ fill: #050810; stroke: #1e293b; stroke-width: 1; }}
-      .card-title {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; font-weight: 700; fill: #64748B; letter-spacing: 0.5px; }}
-      .card-val {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 16px; font-weight: 800; fill: #F1F5F9; }}
-      .accent-cyan {{ fill: #00E5FF; }}
-      .accent-green {{ fill: #00FF87; }}
-      .accent-amber {{ fill: #FF9100; }}
-      .accent-purple {{ fill: #BD00FF; }}
-      .sec-title {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 700; fill: #64748B; letter-spacing: 1px; }}
+      .sec-title {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 700; fill: #8892b0; letter-spacing: 1px; }}
+      .metric-lbl {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; font-weight: bold; letter-spacing: 0.5px; }}
+      .metric-val {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: bold; fill: #00E5FF; }}
+      .env-lbl {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; }}
+      .env-val {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; font-weight: bold; fill: #00FF87; }}
       .lang-lbl {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #94A3B8; }}
       .lang-pct {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }}
       .bar-track {{ fill: #080d16; stroke: #1e293b; stroke-width: 0.5; }}
@@ -332,117 +329,104 @@ def generate_svg(stats):
   <circle cx="25" cy="24" r="4" fill="#00FF87">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
   </circle>
-  <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // SYSTEM_NODE_01</text>
-  <text x="500" y="26" class="hud-text" text-anchor="start">
+  <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // NODE_01</text>
+  <text x="450" y="27" class="hud-text" text-anchor="middle">
     PORT: <tspan class="hud-text-bright">9000</tspan> &#160;▪&#160; 
     DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &#160;▪&#160; 
     STABLE: <tspan class="hud-text-bright">TRUE</tspan>
   </text>
-  <text x="775" y="26" class="hud-text" text-anchor="end">SYNC_TIME: {timestamp}</text>
+  <text x="770" y="27" class="hud-text" text-anchor="end">SYNC: {timestamp}</text>
   <line x1="20" y1="38" x2="780" y2="38" stroke="#0F172A" stroke-width="1.5" />
 
-  <!-- LEFT PANEL: Core Metrics (X: 20 to 260) -->
-  <!-- Card 1: Repositories -->
-  <g transform="translate(20, 50)">
-    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #00E5FF; stroke-opacity: 0.5;" />
-    <!-- Mini Folder Graphic -->
-    <path d="M 12 14 L 18 14 L 20 17 L 26 17 L 26 28 L 12 28 Z" fill="none" stroke="#00E5FF" stroke-width="1" />
-    <text x="34" y="18" class="card-title">SYS.REPOSITORIES</text>
-    <text x="34" y="32" class="card-val">{total_repos}</text>
-    <rect x="98" y="10" width="4" height="4" class="accent-cyan" />
-  </g>
-
-  <!-- Card 2: Followers -->
-  <g transform="translate(148, 50)">
-    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #FF9100; stroke-opacity: 0.5;" />
-    <!-- Mini Connections Graphic -->
-    <circle cx="16" cy="18" r="2.5" fill="none" stroke="#FF9100" stroke-width="1" />
-    <circle cx="24" cy="24" r="2.5" fill="none" stroke="#FF9100" stroke-width="1" />
-    <line x1="18.5" y1="20.5" x2="21.5" y2="21.5" stroke="#FF9100" stroke-width="1" />
-    <text x="34" y="18" class="card-title">SYS.FOLLOWERS</text>
-    <text x="34" y="32" class="card-val">{followers}</text>
-    <rect x="98" y="10" width="4" height="4" class="accent-amber" />
-  </g>
-
-  <!-- Card 3: Profile Stars -->
-  <g transform="translate(20, 102)">
-    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #00FF87; stroke-opacity: 0.5;" />
-    <!-- Mini Star Graphic -->
-    <path d="M 18 12 L 20 16 L 24 16 L 21 19 L 22 23 L 18 21 L 14 23 L 15 19 L 12 16 L 16 16 Z" fill="none" stroke="#00FF87" stroke-width="1" />
-    <text x="34" y="18" class="card-title">SYS.STARS_TOTAL</text>
-    <text x="34" y="32" class="card-val">{stars}</text>
-    <rect x="98" y="10" width="4" height="4" class="accent-green" />
-  </g>
-
-  <!-- Card 4: Stored Forks -->
-  <g transform="translate(148, 102)">
-    <rect width="112" height="42" rx="4" class="card-border" style="stroke: #BD00FF; stroke-opacity: 0.5;" />
-    <!-- Mini Fork Graphic -->
-    <path d="M 14 13 L 14 17 A 4 4 0 0 0 18 21 L 18 26 M 22 13 L 22 17 A 4 4 0 0 1 18 21" fill="none" stroke="#BD00FF" stroke-width="1" />
-    <circle cx="18" cy="27" r="1.5" fill="#BD00FF" />
-    <text x="34" y="18" class="card-title">SYS.STORED_FORKS</text>
-    <text x="34" y="32" class="card-val">{stored_forks}</text>
-    <rect x="98" y="10" width="4" height="4" class="accent-purple" />
-  </g>
-  
-  <!-- Environment indicators at the bottom left -->
-  <g transform="translate(20, 160)">
-    <rect width="240" height="60" rx="4" class="card-border" />
-    <text x="15" y="18" class="hud-text">ENV_RUNTIME: <tspan class="hud-text-bright">NODE v20</tspan></text>
-    <text x="15" y="33" class="hud-text">SYS_ENCRYPTION: <tspan class="hud-text-bright">TLS_1.3</tspan></text>
-    <text x="15" y="48" class="hud-text">CORE_ACCOUNT: <tspan class="hud-text-bright">ACTIVE</tspan></text>
+  <!-- COLUMN 1: System Metrics & Environment (X: 30 to 240) -->
+  <g transform="translate(30, 50)">
+    <text x="0" y="8" class="sec-title">CORE SYSTEM METRICS</text>
+    <line x1="0" y1="14" x2="210" y2="14" stroke="#0F172A" stroke-width="1" />
     
-    <text x="130" y="18" class="hud-text">IP_SOCKET: <tspan class="hud-text-bright">RESOLVED</tspan></text>
-    <text x="130" y="33" class="hud-text">FRAMEWORK: <tspan class="hud-text-bright">ENGINEERING</tspan></text>
-    <text x="130" y="48" class="hud-text">SYS_STATUS: <tspan class="hud-text-bright" fill="#00FF87">SECURE</tspan></text>
+    <!-- Core Metrics List -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="0" class="metric-lbl">REPOSITORIES</text>
+      <text x="210" y="0" class="metric-val" text-anchor="end">{total_repos}</text>
+    </g>
+    <g transform="translate(0, 48)">
+      <text x="0" y="0" class="metric-lbl">FOLLOWERS</text>
+      <text x="210" y="0" class="metric-val" text-anchor="end">{followers}</text>
+    </g>
+    <g transform="translate(0, 66)">
+      <text x="0" y="0" class="metric-lbl">TOTAL STARS</text>
+      <text x="210" y="0" class="metric-val" text-anchor="end">{stars}</text>
+    </g>
+    <g transform="translate(0, 84)">
+      <text x="0" y="0" class="metric-lbl">STORED FORKS</text>
+      <text x="210" y="0" class="metric-val" text-anchor="end">{stored_forks}</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="0" y1="98" x2="210" y2="98" stroke="#0F172A" stroke-width="1" opacity="0.3" />
+
+    <!-- Environment List -->
+    <g transform="translate(0, 114)">
+      <text x="0" y="0" class="env-lbl">RUNTIME: <tspan class="env-val">NODE v20</tspan></text>
+      <text x="110" y="0" class="env-lbl">SOCKET: <tspan class="env-val">RESOLVED</tspan></text>
+    </g>
+    <g transform="translate(0, 130)">
+      <text x="0" y="0" class="env-lbl">ENCRYPT: <tspan class="env-val">TLS_1.3</tspan></text>
+      <text x="110" y="0" class="env-lbl">FRAMEWORK: <tspan class="env-val">ENG.</tspan></text>
+    </g>
+    <g transform="translate(0, 146)">
+      <text x="0" y="0" class="env-lbl">ACCOUNT: <tspan class="env-val">ACTIVE</tspan></text>
+      <text x="110" y="0" class="env-lbl">STATUS: <tspan class="env-val">SECURE</tspan></text>
+    </g>
   </g>
 
-  <!-- MIDDLE PANEL: Active Streak Engine (X: 280 to 520) -->
+  <!-- COLUMN DIVIDERS -->
+  <line x1="260" y1="50" x2="260" y2="210" stroke="#0F172A" stroke-width="1.5" opacity="0.4" />
+  <line x1="530" y1="50" x2="530" y2="210" stroke="#0F172A" stroke-width="1.5" opacity="0.4" />
+
+  <!-- COLUMN 2: Active Streak Engine (X: 280 to 520) -->
   <g transform="translate(280, 50)">
     <text x="0" y="8" class="sec-title">ACTIVE STREAK ENGINE</text>
-    <line x1="0" y1="14" x2="240" y2="14" stroke="#0F172A" stroke-width="1" />
-
-    <!-- Dividers -->
-    <line x1="80" y1="30" x2="80" y2="120" stroke="#0F172A" stroke-width="1" opacity="0.3" />
-    <line x1="160" y1="30" x2="160" y2="120" stroke="#0F172A" stroke-width="1" opacity="0.3" />
+    <line x1="0" y1="14" x2="230" y2="14" stroke="#0F172A" stroke-width="1" />
 
     <!-- Left Column: Total Contributions -->
     <g transform="translate(0, 20)">
-      <text x="40" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{total_contributions}</text>
-      <text x="40" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="700" fill="#94A3B8" text-anchor="middle">Total Contributions</text>
-      <text x="40" y="85" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{total_range}</text>
+      <text x="35" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{total_contributions}</text>
+      <text x="35" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">TOTAL</text>
+      <text x="35" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">CONTRIBS</text>
+      <text x="35" y="94" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">{total_range}</text>
     </g>
 
     <!-- Middle Column: Current Streak -->
     <g transform="translate(0, 20)">
       <!-- Flame Icon -->
-      <path d="M 120 18 C 122.2 22 124.4 23.8 124.4 27 A 4.4 4.4 0 0 1 115.6 27 C 115.6 23.8 117.8 22 120 18 Z" fill="#FF9100" />
+      <path d="M 115 18 C 117.2 22 119.4 23.8 119.4 27 A 4.4 4.4 0 0 1 110.6 27 C 110.6 23.8 112.8 22 115 18 Z" fill="#FF9100" />
       
       <!-- Background Arc Ring -->
-      <path d="M 127.5 31.3 A 22 22 0 1 1 112.5 31.3" fill="none" stroke="#101726" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 122.5 31.3 A 22 22 0 1 1 107.5 31.3" fill="none" stroke="#101726" stroke-width="2.5" stroke-linecap="round" />
       
       <!-- Active Progress Arc Ring -->
-      <path d="M 127.5 31.3 A 22 22 0 1 1 112.5 31.3" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="122.88" stroke-dashoffset="{dash_offset:.2f}" />
+      <path d="M 122.5 31.3 A 22 22 0 1 1 107.5 31.3" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="122.88" stroke-dashoffset="{dash_offset:.2f}" />
       
-      <text x="120" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="800" fill="#00E5FF" text-anchor="middle">{current_streak}</text>
-      <text x="120" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="800" fill="#F1F5F9" text-anchor="middle">Current Streak</text>
-      <text x="120" y="99" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{current_range}</text>
+      <text x="115" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="800" fill="#00E5FF" text-anchor="middle">{current_streak}</text>
+      <text x="115" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="800" fill="#F1F5F9" text-anchor="middle">CURRENT</text>
+      <text x="115" y="92" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="800" fill="#F1F5F9" text-anchor="middle">STREAK</text>
+      <text x="115" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">{current_range}</text>
     </g>
 
     <!-- Right Column: Longest Streak -->
     <g transform="translate(0, 20)">
-      <text x="200" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{longest_streak}</text>
-      <text x="200" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.5" font-weight="700" fill="#94A3B8" text-anchor="middle">Longest Streak</text>
-      <text x="200" y="85" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="7" fill="#64748B" text-anchor="middle">{longest_range}</text>
+      <text x="195" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">{longest_streak}</text>
+      <text x="195" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">LONGEST</text>
+      <text x="195" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">STREAK</text>
+      <text x="195" y="94" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">{longest_range}</text>
     </g>
   </g>
 
-  <!-- RIGHT PANEL: Language Distribution (X: 540 to 780) -->
-  <g transform="translate(540, 50)">
+  <!-- COLUMN 3: Primary Language Distribution (X: 550 to 780) -->
+  <g transform="translate(550, 50)">
     <text x="0" y="8" class="sec-title">PRIMARY LANGUAGE DISTRIBUTION</text>
-    <line x1="0" y1="14" x2="240" y2="14" stroke="#0F172A" stroke-width="1" />
+    <line x1="0" y1="14" x2="220" y2="14" stroke="#0F172A" stroke-width="1" />
 
-    <!-- Languages loop -->
     <g transform="translate(0, 25)">
 """
     
@@ -452,14 +436,14 @@ def generate_svg(stats):
         name = lang["name"]
         color = lang["color"]
         
-        # Track width is 240px
-        bar_width = int((pct / 100) * 240)
+        # Track width is 220px
+        bar_width = int((pct / 100) * 220)
         
         svg += f"""      <!-- {name} Bar -->
       <g transform="translate(0, {y_offset})">
         <text x="0" y="8" class="lang-lbl">{name}</text>
-        <text x="240" y="8" class="lang-pct" text-anchor="end">{pct:.1f}%</text>
-        <rect x="0" y="14" width="240" height="8" rx="2" class="bar-track" />
+        <text x="220" y="8" class="lang-pct" text-anchor="end">{pct:.1f}%</text>
+        <rect x="0" y="14" width="220" height="8" rx="2" class="bar-track" />
         <rect x="0" y="14" width="{bar_width}" height="8" rx="2" fill="{color}">
           <animate attributeName="width" from="0" to="{bar_width}" dur="1.2s" fill="freeze" />
         </rect>
