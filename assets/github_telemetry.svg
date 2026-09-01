@@ -37,7 +37,7 @@
     DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &#160;▪&#160; 
     STABLE: <tspan class="hud-text-bright">TRUE</tspan>
   </text>
-  <text x="770" y="27" class="hud-text" text-anchor="end">SYNC: 2026-09-01 03:33 UTC</text>
+  <text x="770" y="27" class="hud-text" text-anchor="end">SYNC: 2026-09-01 16:03 UTC</text>
   <line x1="20" y1="38" x2="780" y2="38" stroke="#0F172A" stroke-width="1.5" />
 
   <!-- COLUMN 1: System Metrics & Environment (X: 30 to 240) -->
