@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="stack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061D30" />
+      <stop offset="50%" stop-color="#042F40" />
+      <stop offset="100%" stop-color="#061D30" />
+    </linearGradient>
+
+    <!-- Card Fill -->
+    <linearGradient id="stack-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064663" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#042F40" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Fine Grid -->
+    <pattern id="stack-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.75" fill="#064663" opacity="0.45" />
+    </pattern>
+  </defs>
+
+  <style>
+    .stack-head { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00C9B7; letter-spacing: 2px; }
+    .stack-sub { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #8FA7B5; letter-spacing: 1px; }
+    .cat-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11.5px; font-weight: 700; fill: #EAF2F5; letter-spacing: 0.3px; }
+    .cat-tag { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 7.5px; font-weight: 700; fill: #8FA7B5; letter-spacing: 0.8px; }
+    .tech-pill { fill: #061D30; stroke: #064663; stroke-width: 0.85; }
+    .tech-name { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 9px; font-weight: 600; fill: #EAF2F5; }
+    .tech-note { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 7.5px; fill: #8FA7B5; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="900" height="320" rx="8" fill="url(#stack-bg)" stroke="#064663" stroke-width="1.5" />
+  <rect width="900" height="320" rx="8" fill="url(#stack-grid)" />
+
+  <!-- Top Title HUD -->
+  <g transform="translate(28, 22)">
+    <circle cx="5" cy="4" r="3.5" fill="#00C9B7">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="8" class="stack-head">TECHNICAL CONSTELLATION // VERIFIED TOOLCHAINS &amp; ECOSYSTEMS</text>
+    <text x="844" y="8" class="stack-sub" text-anchor="end">INDEXED REPOSITORY STACK</text>
+    <line x1="0" y1="16" x2="844" y2="16" stroke="#064663" stroke-width="1" />
+  </g>
+
+  <!-- ================= ROW 1 (Y: 50) ================= -->
+
+  <!-- CARD 1: LANGUAGES & CORE RUNTIMES -->
+  <g transform="translate(28, 50)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#00C9B7" />
+
+    <text x="12" y="18" class="cat-title">Languages &amp; Runtimes</text>
+    <text x="12" y="30" class="cat-tag">[CORE_SYNTAX_TIER]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- Tech Pills 2x2 Grid -->
+    <!-- TypeScript -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">TypeScript</text>
+    <text x="30" y="67" class="tech-note">Primary / Strict Mode</text>
+
+    <!-- JavaScript -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#F0B45F" />
+    <text x="156" y="58" class="tech-name">JavaScript</text>
+    <text x="156" y="67" class="tech-note">ESNext / Modern APIs</text>
+
+    <!-- Python -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#00C9B7" />
+    <text x="30" y="92" class="tech-name">Python 3</text>
+    <text x="30" y="101" class="tech-note">Data &amp; ML Services</text>
+
+    <!-- Java -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#8FA7B5" />
+    <text x="156" y="92" class="tech-name">Java</text>
+    <text x="156" y="101" class="tech-note">OOP &amp; Academic Kernels</text>
+  </g>
+
+  <!-- CARD 2: FRONTEND & USER INTERFACES -->
+  <g transform="translate(316, 50)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#064663" />
+
+    <text x="12" y="18" class="cat-title">Frontend Engineering</text>
+    <text x="12" y="30" class="cat-tag">[VIEWPORT_AND_DOM]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- React -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">React.js</text>
+    <text x="30" y="67" class="tech-note">Component Architecture</text>
+
+    <!-- Next.js -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#EAF2F5" />
+    <text x="156" y="58" class="tech-name">Next.js</text>
+    <text x="156" y="67" class="tech-note">App Router / SSR</text>
+
+    <!-- TailwindCSS -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#00C9B7" />
+    <text x="30" y="92" class="tech-name">TailwindCSS</text>
+    <text x="30" y="101" class="tech-note">Design Token Systems</text>
+
+    <!-- Three.js -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#F0B45F" />
+    <text x="156" y="92" class="tech-name">Three.js</text>
+    <text x="156" y="101" class="tech-note">Canvas &amp; WebGL Visuals</text>
+  </g>
+
+  <!-- CARD 3: BACKEND SERVICES & APIS -->
+  <g transform="translate(604, 50)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#F0B45F" />
+
+    <text x="12" y="18" class="cat-title">Backend &amp; API Design</text>
+    <text x="12" y="30" class="cat-tag">[INGESTION_AND_LOGIC]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- Node.js -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">Node.js</text>
+    <text x="30" y="67" class="tech-note">Event Loop / Async</text>
+
+    <!-- Express -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#8FA7B5" />
+    <text x="156" y="58" class="tech-name">Express.js</text>
+    <text x="156" y="67" class="tech-note">RESTful Microservices</text>
+
+    <!-- FastAPI -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#00C9B7" />
+    <text x="30" y="92" class="tech-name">FastAPI / Flask</text>
+    <text x="30" y="101" class="tech-note">Python Service Endpoints</text>
+
+    <!-- SSE Streams -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#F0B45F" />
+    <text x="156" y="92" class="tech-name">SSE Streams</text>
+    <text x="156" y="101" class="tech-note">Real-Time Event Push</text>
+  </g>
+
+  <!-- ================= ROW 2 (Y: 180) ================= -->
+
+  <!-- CARD 4: PERSISTENCE & DATA ENGINES -->
+  <g transform="translate(28, 180)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#064663" />
+
+    <text x="12" y="18" class="cat-title">Persistence &amp; Storage</text>
+    <text x="12" y="30" class="cat-tag">[TRANSACTIONAL_DATA]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- PostgreSQL -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">PostgreSQL</text>
+    <text x="30" y="67" class="tech-note">Relational Modeling</text>
+
+    <!-- MongoDB -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="156" y="58" class="tech-name">MongoDB</text>
+    <text x="156" y="67" class="tech-note">Document Schemas</text>
+
+    <!-- Supabase -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#8FA7B5" />
+    <text x="30" y="92" class="tech-name">Supabase</text>
+    <text x="30" y="101" class="tech-note">Postgres Backend</text>
+
+    <!-- Schema ORM -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#F0B45F" />
+    <text x="156" y="92" class="tech-name">Prisma / SQL</text>
+    <text x="156" y="101" class="tech-note">Type-Safe Migrations</text>
+  </g>
+
+  <!-- CARD 5: DISTRIBUTED SYSTEMS & QUEUES -->
+  <g transform="translate(316, 180)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#00C9B7" />
+
+    <text x="12" y="18" class="cat-title">Distributed Systems</text>
+    <text x="12" y="30" class="cat-tag">[QUEUE_AND_WORKERS]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- Turborepo -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">Turborepo</text>
+    <text x="30" y="67" class="tech-note">Monorepo Pipeline</text>
+
+    <!-- Worker Fleets -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#F0B45F" />
+    <text x="156" y="58" class="tech-name">Worker Fleets</text>
+    <text x="156" y="67" class="tech-note">Isolated Job Daemons</text>
+
+    <!-- Partitioning -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#8FA7B5" />
+    <text x="30" y="92" class="tech-name">Job Partitioning</text>
+    <text x="30" y="101" class="tech-note">Concurrency Guards</text>
+
+    <!-- Big Data -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#00C9B7" />
+    <text x="156" y="92" class="tech-name">Spark / Big Data</text>
+    <text x="156" y="101" class="tech-note">Academic Specialization</text>
+  </g>
+
+  <!-- CARD 6: AI, INFRA & TOOLING -->
+  <g transform="translate(604, 180)">
+    <rect width="268" height="118" rx="6" fill="url(#stack-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#F0B45F" />
+
+    <text x="12" y="18" class="cat-title">AI, Infra &amp; Tooling</text>
+    <text x="12" y="30" class="cat-tag">[OPS_AND_INTELLIGENCE]</text>
+    <line x1="12" y1="35" x2="256" y2="35" stroke="#064663" stroke-width="0.7" />
+
+    <!-- Docker -->
+    <rect x="12" y="44" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="30" y="58" class="tech-name">Docker</text>
+    <text x="30" y="67" class="tech-note">Compose / Isolation</text>
+
+    <!-- GitHub Actions -->
+    <rect x="138" y="44" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="58" r="2.5" fill="#00C9B7" />
+    <text x="156" y="58" class="tech-name">GitHub Actions</text>
+    <text x="156" y="67" class="tech-note">CI/CD Automation</text>
+
+    <!-- NLP / SentenceTransformers -->
+    <rect x="12" y="78" width="116" height="28" rx="4" class="tech-pill" />
+    <circle cx="22" cy="92" r="2.5" fill="#F0B45F" />
+    <text x="30" y="92" class="tech-name">Sentence-Transformers</text>
+    <text x="30" y="101" class="tech-note">Semantic Embeddings</text>
+
+    <!-- Scikit-learn -->
+    <rect x="138" y="78" width="118" height="28" rx="4" class="tech-pill" />
+    <circle cx="148" cy="92" r="2.5" fill="#8FA7B5" />
+    <text x="156" y="92" class="tech-name">Scikit-learn</text>
+    <text x="156" y="101" class="tech-note">Predictive Modeling</text>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="auto">
+  <defs>
+    <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061D30" />
+      <stop offset="50%" stop-color="#042F40" />
+      <stop offset="100%" stop-color="#061D30" />
+    </linearGradient>
+    <pattern id="footer-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="0.75" fill="#064663" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <style>
+    .foot-philosophy { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 700; fill: #00C9B7; letter-spacing: 2.5px; }
+    .foot-author { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #EAF2F5; letter-spacing: 0.5px; }
+    .foot-meta { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 8px; fill: #8FA7B5; letter-spacing: 1px; }
+  </style>
+
+  <!-- Container -->
+  <rect width="900" height="80" rx="6" fill="url(#footer-bg)" stroke="#064663" stroke-width="1.5" />
+  <rect width="900" height="80" rx="6" fill="url(#footer-grid)" />
+
+  <!-- Corner coordinate ticks -->
+  <path d="M 16 22 L 16 14 L 24 14" fill="none" stroke="#00C9B7" stroke-width="1.2" />
+  <path d="M 884 22 L 884 14 L 876 14" fill="none" stroke="#064663" stroke-width="1.2" />
+  <path d="M 16 58 L 16 66 L 24 66" fill="none" stroke="#064663" stroke-width="1.2" />
+  <path d="M 884 58 L 884 66 L 876 66" fill="none" stroke="#00C9B7" stroke-width="1.2" />
+
+  <!-- Bottom Accent Line -->
+  <line x1="0" y1="78" x2="900" y2="78" stroke="#00C9B7" stroke-width="2" stroke-opacity="0.8" />
+
+  <!-- Centered Content -->
+  <g transform="translate(450, 26)">
+    <text x="0" y="0" class="foot-philosophy" text-anchor="middle">
+      ARCHITECTED WITH PRECISION // RESILIENT BY DESIGN // SHIPPED WITH DISCIPLINE
+    </text>
+    <text x="0" y="24" class="foot-author" text-anchor="middle">
+      Rahul Seervi <tspan fill="#8FA7B5" font-weight="400">|</tspan> <tspan class="foot-meta">FULL-STACK &amp; DISTRIBUTED SYSTEMS ENGINEER</tspan>
+    </text>
+    <text x="0" y="40" class="foot-meta" text-anchor="middle">
+      SRM INSTITUTE OF SCIENCE &amp; TECHNOLOGY // B.TECH CSE (BIG DATA ANALYTICS)
+    </text>
+  </g>
+</svg>

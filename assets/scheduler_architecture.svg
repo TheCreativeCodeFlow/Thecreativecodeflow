@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="sched-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061D30" />
+      <stop offset="50%" stop-color="#042F40" />
+      <stop offset="100%" stop-color="#061D30" />
+    </linearGradient>
+
+    <!-- Card Fill -->
+    <linearGradient id="sched-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064663" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#042F40" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="sched-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.75" fill="#064663" opacity="0.5" />
+    </pattern>
+
+    <!-- Arrow Markers -->
+    <marker id="sched-arr" viewBox="0 0 8 8" refX="5" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 6 4 L 1 7 z" fill="#064663" />
+    </marker>
+    <marker id="sched-arr-teal" viewBox="0 0 8 8" refX="5" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 6 4 L 1 7 z" fill="#00C9B7" />
+    </marker>
+    <marker id="sched-arr-gold" viewBox="0 0 8 8" refX="5" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 6 4 L 1 7 z" fill="#F0B45F" />
+    </marker>
+  </defs>
+
+  <style>
+    .sched-head { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00C9B7; letter-spacing: 2px; }
+    .sched-sub { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #8FA7B5; letter-spacing: 1px; }
+    .box-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; font-weight: 700; fill: #EAF2F5; letter-spacing: 0.2px; }
+    .box-tag { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 8px; font-weight: 700; fill: #8FA7B5; letter-spacing: 0.8px; }
+    .box-bullet { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; fill: #8FA7B5; }
+    .box-accent { fill: #EAF2F5; font-weight: 600; }
+    .cycle-step { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 8.5px; font-weight: 700; }
+  </style>
+
+  <!-- Canvas Container -->
+  <rect width="900" height="280" rx="8" fill="url(#sched-bg)" stroke="#064663" stroke-width="1.5" />
+  <rect width="900" height="280" rx="8" fill="url(#sched-grid)" />
+
+  <!-- Top Title HUD -->
+  <g transform="translate(28, 24)">
+    <circle cx="5" cy="4" r="3.5" fill="#00C9B7">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="8" class="sched-head">FEATURED ARCHITECTURE // DISTRIBUTED JOB SCHEDULER</text>
+    <text x="844" y="8" class="sched-sub" text-anchor="end">TOPOLOGY: TURBOREPO MONOREPO</text>
+    <line x1="0" y1="18" x2="844" y2="18" stroke="#064663" stroke-width="1" />
+  </g>
+
+  <!-- Flow Arrows (Horizontal pipeline) -->
+  <!-- Box 1 to Box 2 -->
+  <path d="M 185 115 L 225 115" stroke="#00C9B7" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#sched-arr-teal)" fill="none" />
+  <!-- Box 2 to Box 3 -->
+  <path d="M 405 115 L 445 115" stroke="#00C9B7" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#sched-arr-teal)" fill="none" />
+  <!-- Box 3 to Box 4 -->
+  <path d="M 625 115 L 665 115" stroke="#00C9B7" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#sched-arr-teal)" fill="none" />
+
+  <!-- Real-time Feedback Loop (SSE stream to Web Dashboard) -->
+  <path d="M 770 170 L 770 195 L 105 195 L 105 170" stroke="#F0B45F" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#sched-arr-gold)" fill="none" />
+  <circle cx="770" cy="195" r="3" fill="#F0B45F" />
+  <circle cx="105" cy="195" r="3" fill="#F0B45F" />
+  <text x="440" y="208" font-family="ui-monospace, monospace" font-size="7.5" font-weight="600" fill="#F0B45F" text-anchor="middle" letter-spacing="1">
+    REAL-TIME SSE TELEMETRY STREAM (LIFECYCLE EVENTS ➔ MONITORING DASHBOARD)
+  </text>
+
+  <!-- ================= MODULE 1: INGESTION & SUBMISSION ================= -->
+  <g transform="translate(28, 55)">
+    <rect width="155" height="115" rx="6" fill="url(#sched-card)" stroke="#064663" stroke-width="1" />
+    <rect width="155" height="3" rx="1.5" fill="#00C9B7" />
+
+    <text x="12" y="20" class="box-title">Job Ingestion</text>
+    <text x="12" y="32" class="box-tag">apps/api [REST_INGRESS]</text>
+    <line x1="12" y1="38" x2="143" y2="38" stroke="#064663" stroke-width="0.75" />
+
+    <text x="12" y="54" class="box-bullet">▪ <tspan class="box-accent">POST /jobs</tspan> Ingestion</text>
+    <text x="12" y="70" class="box-bullet">▪ Payload Validation</text>
+    <text x="12" y="86" class="box-bullet">▪ Schema Checks (Zod)</text>
+    <text x="12" y="102" class="box-bullet">▪ Idempotency Key</text>
+  </g>
+
+  <!-- ================= MODULE 2: SCHEDULING & PARTITION BROKER ================= -->
+  <g transform="translate(225, 55)">
+    <rect width="180" height="115" rx="6" fill="url(#sched-card)" stroke="#064663" stroke-width="1" />
+    <rect width="180" height="3" rx="1.5" fill="#064663" />
+
+    <text x="12" y="20" class="box-title">Queue &amp; Partitioning</text>
+    <text x="12" y="32" class="box-tag">packages/shared [BROKER]</text>
+    <line x1="12" y1="38" x2="168" y2="38" stroke="#064663" stroke-width="0.75" />
+
+    <text x="12" y="54" class="box-bullet">▪ Job Partitioning Logic</text>
+    <text x="12" y="70" class="box-bullet">▪ Concurrency Guard</text>
+    <text x="12" y="86" class="box-bullet">▪ Delayed Task Queue</text>
+    <text x="12" y="102" class="box-bullet">▪ Priority Re-ordering</text>
+  </g>
+
+  <!-- ================= MODULE 3: PERSISTENCE & MUTEX STORE ================= -->
+  <g transform="translate(445, 55)">
+    <rect width="180" height="115" rx="6" fill="url(#sched-card)" stroke="#064663" stroke-width="1" />
+    <rect width="180" height="3" rx="1.5" fill="#F0B45F" />
+
+    <text x="12" y="20" class="box-title">State &amp; Lock Store</text>
+    <text x="12" y="32" class="box-tag">packages/database [STORE]</text>
+    <line x1="12" y1="38" x2="168" y2="38" stroke="#064663" stroke-width="0.75" />
+
+    <text x="12" y="54" class="box-bullet">▪ Distributed Mutex Locks</text>
+    <text x="12" y="70" class="box-bullet">▪ Job State Transitions</text>
+    <text x="12" y="86" class="box-bullet">▪ Dead-Letter Audit Logs</text>
+    <text x="12" y="102" class="box-bullet">▪ At-Least-Once Delivery</text>
+  </g>
+
+  <!-- ================= MODULE 4: EXECUTION WORKER FLEET ================= -->
+  <g transform="translate(665, 55)">
+    <rect width="205" height="115" rx="6" fill="url(#sched-card)" stroke="#064663" stroke-width="1" />
+    <rect width="205" height="3" rx="1.5" fill="#00C9B7" />
+
+    <text x="12" y="20" class="box-title">Worker Daemon Pool</text>
+    <text x="12" y="32" class="box-tag">apps/worker [CONTAINERS]</text>
+    <line x1="12" y1="38" x2="193" y2="38" stroke="#064663" stroke-width="0.75" />
+
+    <text x="12" y="54" class="box-bullet">▪ Isolated Docker Runtimes</text>
+    <text x="12" y="70" class="box-bullet">▪ Exponential Retry Backoff</text>
+    <text x="12" y="86" class="box-bullet">▪ Heartbeat Health Monitor</text>
+    <text x="12" y="102" class="box-bullet">▪ Task Completion Dispatch</text>
+  </g>
+
+  <!-- ================= BOTTOM STRIP: JOB LIFECYCLE PROGRESSION ================= -->
+  <g transform="translate(28, 225)">
+    <rect width="844" height="38" rx="4" fill="#042F40" stroke="#064663" stroke-width="1" />
+
+    <!-- Lifecycle Label -->
+    <text x="16" y="23" font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#8FA7B5" letter-spacing="1px">
+      LIFECYCLE PIPELINE:
+    </text>
+
+    <!-- State 1: Enqueued -->
+    <rect x="150" y="8" width="95" height="22" rx="3" fill="#061D30" stroke="#064663" stroke-width="0.75" />
+    <circle cx="162" cy="19" r="2.5" fill="#8FA7B5" />
+    <text x="172" y="22" class="cycle-step" fill="#EAF2F5">ENQUEUED</text>
+
+    <!-- Connector -->
+    <path d="M 249 19 L 268 19" stroke="#064663" stroke-width="1.5" marker-end="url(#sched-arr)" />
+
+    <!-- State 2: Scheduled -->
+    <rect x="275" y="8" width="105" height="22" rx="3" fill="#061D30" stroke="#064663" stroke-width="0.75" />
+    <circle cx="287" cy="19" r="2.5" fill="#064663" />
+    <text x="297" y="22" class="cycle-step" fill="#8FA7B5">SCHEDULED</text>
+
+    <!-- Connector -->
+    <path d="M 384 19 L 403 19" stroke="#064663" stroke-width="1.5" marker-end="url(#sched-arr)" />
+
+    <!-- State 3: Running -->
+    <rect x="410" y="8" width="95" height="22" rx="3" fill="#061D30" stroke="#00C9B7" stroke-width="1" />
+    <circle cx="422" cy="19" r="2.5" fill="#00C9B7" />
+    <text x="432" y="22" class="cycle-step" fill="#00C9B7">RUNNING</text>
+
+    <!-- Connector Branch (Success / Fail) -->
+    <path d="M 509 19 L 528 19" stroke="#00C9B7" stroke-width="1.5" marker-end="url(#sched-arr-teal)" />
+
+    <!-- State 4: Completed -->
+    <rect x="535" y="8" width="110" height="22" rx="3" fill="#061D30" stroke="#00C9B7" stroke-width="1" />
+    <circle cx="547" cy="19" r="2.5" fill="#00C9B7" />
+    <text x="557" y="22" class="cycle-step" fill="#EAF2F5">COMPLETED</text>
+
+    <text x="655" y="23" font-family="ui-monospace, monospace" font-size="9" fill="#8FA7B5">OR</text>
+
+    <!-- State 5: Failed / Retry -->
+    <rect x="675" y="8" width="155" height="22" rx="3" fill="#061D30" stroke="#F0B45F" stroke-width="1" />
+    <circle cx="687" cy="19" r="2.5" fill="#F0B45F" />
+    <text x="697" y="22" class="cycle-step" fill="#F0B45F">FAILED ➔ RETRY / DLQ</text>
+  </g>
+</svg>

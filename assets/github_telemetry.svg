@@ -1,160 +1,159 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="auto">
   <defs>
-    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
-    </pattern>
-    <linearGradient id="panel-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#030508"/>
-      <stop offset="100%" stop-color="#070b12"/>
+    <!-- Background Gradient -->
+    <linearGradient id="telemetry-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061D30" />
+      <stop offset="60%" stop-color="#042F40" />
+      <stop offset="100%" stop-color="#061D30" />
     </linearGradient>
-    <style>
-      .bg { fill: url(#panel-grad); stroke: #0f172a; stroke-width: 1.5; }
-      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00E5FF; letter-spacing: 2px; }
-      .hud-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; letter-spacing: 0.5px; }
-      .hud-text-bright { fill: #00FF87; font-weight: bold; }
-      .sec-title { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: 700; fill: #8892b0; letter-spacing: 1px; }
-      .metric-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; font-weight: bold; letter-spacing: 0.5px; }
-      .metric-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: bold; fill: #00E5FF; }
-      .env-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; }
-      .env-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; font-weight: bold; fill: #00FF87; }
-      .lang-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; font-weight: bold; fill: #94A3B8; }
-      .lang-pct { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 9px; fill: #64748B; }
-      .bar-track { fill: #080d16; stroke: #1e293b; stroke-width: 0.5; }
-    </style>
+
+    <!-- Panel Card Fill -->
+    <linearGradient id="card-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064663" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#042F40" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Coordinate Grid Pattern -->
+    <pattern id="tele-grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="0.75" fill="#064663" opacity="0.45" />
+    </pattern>
   </defs>
 
-  <!-- Container -->
-  <rect width="800" height="240" rx="8" class="bg" />
-  <rect width="800" height="240" rx="8" fill="url(#dot-grid)" />
+  <style>
+    .t-head { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00C9B7; letter-spacing: 2px; }
+    .t-sub { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #8FA7B5; letter-spacing: 1px; }
+    .sec-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11.5px; font-weight: 700; fill: #EAF2F5; letter-spacing: 0.2px; }
+    .sec-tag { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 7.5px; font-weight: 700; fill: #8FA7B5; letter-spacing: 0.8px; }
+    .metric-lbl { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; fill: #8FA7B5; font-weight: 600; letter-spacing: 0.5px; }
+    .metric-val { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; font-weight: 700; fill: #00C9B7; }
+    .streak-big { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 22px; font-weight: 800; fill: #00C9B7; }
+    .streak-lbl { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 8px; font-weight: 700; fill: #EAF2F5; }
+    .streak-sub { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 7px; fill: #8FA7B5; }
+    .lang-name { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; font-weight: 600; fill: #EAF2F5; }
+    .lang-pct { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; font-weight: 600; fill: #8FA7B5; }
+    .bar-track { fill: #061D30; stroke: #064663; stroke-width: 0.75; }
+  </style>
+
+  <!-- Container Base -->
+  <rect width="900" height="240" rx="8" fill="url(#telemetry-bg)" stroke="#064663" stroke-width="1.5" />
+  <rect width="900" height="240" rx="8" fill="url(#tele-grid)" />
 
   <!-- Top Header HUD -->
-  <circle cx="25" cy="24" r="4" fill="#00FF87">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
-  </circle>
-  <text x="38" y="27" class="title-main">GITHUB CORE TELEMETRY // NODE_01</text>
-  <text x="450" y="27" class="hud-text" text-anchor="middle">
-    PORT: <tspan class="hud-text-bright">9000</tspan> &#160;▪&#160; 
-    DAEMON: <tspan class="hud-text-bright">ACTIVE</tspan> &#160;▪&#160; 
-    STABLE: <tspan class="hud-text-bright">TRUE</tspan>
-  </text>
-  <text x="770" y="27" class="hud-text" text-anchor="end">SYNC: 2026-10-26 03:12 UTC</text>
-  <line x1="20" y1="38" x2="780" y2="38" stroke="#0F172A" stroke-width="1.5" />
+  <g transform="translate(28, 22)">
+    <circle cx="5" cy="4" r="3.5" fill="#00C9B7">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="8" class="t-head">GITHUB TELEMETRY &amp; ACTIVITY AUDIT // GRAPHQL PIPELINE</text>
+    <text x="844" y="8" class="t-sub" text-anchor="end">SYNCED: 2026-10-26 15:54 UTC</text>
+    <line x1="0" y1="16" x2="844" y2="16" stroke="#064663" stroke-width="1" />
+  </g>
 
-  <!-- COLUMN 1: System Metrics & Environment (X: 30 to 240) -->
-  <g transform="translate(30, 50)">
-    <text x="0" y="8" class="sec-title">CORE SYSTEM METRICS</text>
-    <line x1="0" y1="14" x2="210" y2="14" stroke="#0F172A" stroke-width="1" />
-    
-    <!-- Core Metrics List -->
-    <g transform="translate(0, 30)">
-      <text x="0" y="0" class="metric-lbl">REPOSITORIES</text>
-      <text x="210" y="0" class="metric-val" text-anchor="end">54</text>
-    </g>
-    <g transform="translate(0, 48)">
-      <text x="0" y="0" class="metric-lbl">FOLLOWERS</text>
-      <text x="210" y="0" class="metric-val" text-anchor="end">10</text>
-    </g>
-    <g transform="translate(0, 66)">
-      <text x="0" y="0" class="metric-lbl">TOTAL STARS</text>
-      <text x="210" y="0" class="metric-val" text-anchor="end">51</text>
-    </g>
-    <g transform="translate(0, 84)">
-      <text x="0" y="0" class="metric-lbl">STORED FORKS</text>
-      <text x="210" y="0" class="metric-val" text-anchor="end">7</text>
-    </g>
+  <!-- ================= COLUMN 1: REPOSITORY & PROFILE METRICS ================= -->
+  <g transform="translate(28, 50)">
+    <rect width="268" height="170" rx="6" fill="url(#card-fill)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#00C9B7" />
 
-    <!-- Divider -->
-    <line x1="0" y1="98" x2="210" y2="98" stroke="#0F172A" stroke-width="1" opacity="0.3" />
+    <text x="14" y="20" class="sec-title">Repository Metrics</text>
+    <text x="14" y="32" class="sec-tag">[GRAPHQL_AUDIT_LOG]</text>
+    <line x1="14" y1="38" x2="254" y2="38" stroke="#064663" stroke-width="0.75" />
 
-    <!-- Environment List -->
-    <g transform="translate(0, 114)">
-      <text x="0" y="0" class="env-lbl">RUNTIME: <tspan class="env-val">NODE v20</tspan></text>
-      <text x="110" y="0" class="env-lbl">SOCKET: <tspan class="env-val">RESOLVED</tspan></text>
-    </g>
-    <g transform="translate(0, 130)">
-      <text x="0" y="0" class="env-lbl">ENCRYPT: <tspan class="env-val">TLS_1.3</tspan></text>
-      <text x="110" y="0" class="env-lbl">FRAMEWORK: <tspan class="env-val">ENG.</tspan></text>
-    </g>
-    <g transform="translate(0, 146)">
-      <text x="0" y="0" class="env-lbl">ACCOUNT: <tspan class="env-val">ACTIVE</tspan></text>
-      <text x="110" y="0" class="env-lbl">STATUS: <tspan class="env-val">SECURE</tspan></text>
+    <g transform="translate(14, 52)">
+      <text x="0" y="8" class="metric-lbl">PUBLIC REPOSITORIES</text>
+      <text x="240" y="8" class="metric-val" text-anchor="end">45</text>
+
+      <text x="0" y="32" class="metric-lbl">TOTAL FOLLOWERS</text>
+      <text x="240" y="32" class="metric-val" text-anchor="end">10</text>
+
+      <text x="0" y="56" class="metric-lbl">TOTAL STARGAZERS</text>
+      <text x="240" y="56" class="metric-val" text-anchor="end">54</text>
+
+      <text x="0" y="80" class="metric-lbl">REPOSITORY FORKS</text>
+      <text x="240" y="80" class="metric-val" text-anchor="end">4</text>
+
+      <text x="0" y="104" class="metric-lbl">TELEMETRY STATUS</text>
+      <text x="240" y="104" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#F0B45F" text-anchor="end">VERIFIED ACTIVE</text>
     </g>
   </g>
 
-  <!-- COLUMN DIVIDERS -->
-  <line x1="260" y1="50" x2="260" y2="210" stroke="#0F172A" stroke-width="1.5" opacity="0.4" />
-  <line x1="530" y1="50" x2="530" y2="210" stroke="#0F172A" stroke-width="1.5" opacity="0.4" />
+  <!-- ================= COLUMN 2: ACTIVE STREAK ENGINE ================= -->
+  <g transform="translate(316, 50)">
+    <rect width="268" height="170" rx="6" fill="url(#card-fill)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#F0B45F" />
 
-  <!-- COLUMN 2: Active Streak Engine (X: 280 to 520) -->
-  <g transform="translate(280, 50)">
-    <text x="0" y="8" class="sec-title">ACTIVE STREAK ENGINE</text>
-    <line x1="0" y1="14" x2="230" y2="14" stroke="#0F172A" stroke-width="1" />
+    <text x="14" y="20" class="sec-title">Contribution Engine</text>
+    <text x="14" y="32" class="sec-tag">[YEAR_TO_DATE_CALENDAR]</text>
+    <line x1="14" y1="38" x2="254" y2="38" stroke="#064663" stroke-width="0.75" />
 
-    <!-- Left Column: Total Contributions -->
-    <g transform="translate(0, 20)">
-      <text x="35" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">772</text>
-      <text x="35" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">TOTAL</text>
-      <text x="35" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">CONTRIBS</text>
-      <text x="35" y="94" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">26 Oct 2025 - Present</text>
-    </g>
+    <g transform="translate(14, 54)">
+      <!-- Left Sub-col: Total -->
+      <g transform="translate(32, 0)">
+        <text x="0" y="18" class="streak-big" text-anchor="middle">164</text>
+        <text x="0" y="36" class="streak-lbl" text-anchor="middle">TOTAL</text>
+        <text x="0" y="47" class="streak-lbl" text-anchor="middle">CONTRIBS</text>
+        <text x="0" y="62" class="streak-sub" text-anchor="middle">Current Year</text>
+      </g>
 
-    <!-- Middle Column: Current Streak -->
-    <g transform="translate(0, 20)">
-      <!-- Flame Icon -->
-      <path d="M 115 18 C 117.2 22 119.4 23.8 119.4 27 A 4.4 4.4 0 0 1 110.6 27 C 110.6 23.8 112.8 22 115 18 Z" fill="#FF9100" />
-      
-      <!-- Background Arc Ring -->
-      <path d="M 122.5 31.3 A 22 22 0 1 1 107.5 31.3" fill="none" stroke="#101726" stroke-width="2.5" stroke-linecap="round" />
-      
-      <!-- Active Progress Arc Ring -->
-      <path d="M 122.5 31.3 A 22 22 0 1 1 107.5 31.3" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="122.88" stroke-dashoffset="120.76" />
-      
-      <text x="115" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="800" fill="#00E5FF" text-anchor="middle">1</text>
-      <text x="115" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="800" fill="#F1F5F9" text-anchor="middle">CURRENT</text>
-      <text x="115" y="92" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="800" fill="#F1F5F9" text-anchor="middle">STREAK</text>
-      <text x="115" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">25 Oct - 25 Oct</text>
-    </g>
+      <!-- Center Sub-col: Current Streak with Ring -->
+      <g transform="translate(120, 0)">
+        <!-- Arc Progress Background -->
+        <path d="M 7.5 13.3 A 22 22 0 1 1 -7.5 13.3" fill="none" stroke="#061D30" stroke-width="3" stroke-linecap="round" />
+        <!-- Arc Progress Active -->
+        <path d="M 7.5 13.3 A 22 22 0 1 1 -7.5 13.3" fill="none" stroke="#00C9B7" stroke-width="3" stroke-linecap="round" stroke-dasharray="122.88" stroke-dashoffset="97.01" />
+        <text x="0" y="6" class="streak-big" font-size="17" fill="#00C9B7" text-anchor="middle">4</text>
+        <text x="0" y="36" class="streak-lbl" text-anchor="middle">CURRENT</text>
+        <text x="0" y="47" class="streak-lbl" text-anchor="middle">STREAK</text>
+        <text x="0" y="62" class="streak-sub" text-anchor="middle">Active</text>
+      </g>
 
-    <!-- Right Column: Longest Streak -->
-    <g transform="translate(0, 20)">
-      <text x="195" y="45" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#00E5FF" text-anchor="middle">58</text>
-      <text x="195" y="68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">LONGEST</text>
-      <text x="195" y="78" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" font-weight="700" fill="#94A3B8" text-anchor="middle">STREAK</text>
-      <text x="195" y="94" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="6.5" fill="#64748B" text-anchor="middle">26 Aug - 22 Oct</text>
+      <!-- Right Sub-col: Longest Streak -->
+      <g transform="translate(208, 0)">
+        <text x="0" y="18" class="streak-big" fill="#F0B45F" text-anchor="middle">19</text>
+        <text x="0" y="36" class="streak-lbl" text-anchor="middle">LONGEST</text>
+        <text x="0" y="47" class="streak-lbl" text-anchor="middle">STREAK</text>
+        <text x="0" y="62" class="streak-sub" text-anchor="middle">Peak Period</text>
+      </g>
+
+      <!-- Bottom Mini Status -->
+      <g transform="translate(0, 88)">
+        <line x1="0" y1="0" x2="240" y2="0" stroke="#064663" stroke-width="0.5" />
+        <circle cx="4" cy="14" r="2.5" fill="#00C9B7" />
+        <text x="12" y="17" font-family="ui-monospace, monospace" font-size="7.5" fill="#8FA7B5">SCHEDULED WORKFLOW: Platane/snk &amp; GraphQL</text>
+      </g>
     </g>
   </g>
 
-  <!-- COLUMN 3: Primary Language Distribution (X: 550 to 780) -->
-  <g transform="translate(550, 50)">
-    <text x="0" y="8" class="sec-title">PRIMARY LANGUAGE DISTRIBUTION</text>
-    <line x1="0" y1="14" x2="220" y2="14" stroke="#0F172A" stroke-width="1" />
+  <!-- ================= COLUMN 3: LANGUAGE DISTRIBUTION ================= -->
+  <g transform="translate(604, 50)">
+    <rect width="268" height="170" rx="6" fill="url(#card-fill)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#064663" />
 
-    <g transform="translate(0, 25)">
-      <!-- Python Bar -->
+    <text x="14" y="20" class="sec-title">Language Distribution</text>
+    <text x="14" y="32" class="sec-tag">[BYTE_WEIGHTED_ANALYSIS]</text>
+    <line x1="14" y1="38" x2="254" y2="38" stroke="#064663" stroke-width="0.75" />
+
+    <g transform="translate(14, 50)">
       <g transform="translate(0, 0)">
-        <text x="0" y="8" class="lang-lbl">Python</text>
-        <text x="220" y="8" class="lang-pct" text-anchor="end">84.4%</text>
-        <rect x="0" y="14" width="220" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="185" height="8" rx="2" fill="#3572A5">
-          <animate attributeName="width" from="0" to="185" dur="1.2s" fill="freeze" />
+        <text x="0" y="8" class="lang-name">TypeScript</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">54.5%</text>
+        <rect x="0" y="14" width="240" height="7" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="130" height="7" rx="2" fill="#00C9B7">
+          <animate attributeName="width" from="0" to="130" dur="1s" fill="freeze" />
         </rect>
       </g>
-      <!-- TypeScript Bar -->
-      <g transform="translate(0, 45)">
-        <text x="0" y="8" class="lang-lbl">TypeScript</text>
-        <text x="220" y="8" class="lang-pct" text-anchor="end">10.9%</text>
-        <rect x="0" y="14" width="220" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="23" height="8" rx="2" fill="#3178c6">
-          <animate attributeName="width" from="0" to="23" dur="1.2s" fill="freeze" />
+      <g transform="translate(0, 36)">
+        <text x="0" y="8" class="lang-name">Python</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">37.9%</text>
+        <rect x="0" y="14" width="240" height="7" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="90" height="7" rx="2" fill="#F0B45F">
+          <animate attributeName="width" from="0" to="90" dur="1s" fill="freeze" />
         </rect>
       </g>
-      <!-- JavaScript Bar -->
-      <g transform="translate(0, 90)">
-        <text x="0" y="8" class="lang-lbl">JavaScript</text>
-        <text x="220" y="8" class="lang-pct" text-anchor="end">2.5%</text>
-        <rect x="0" y="14" width="220" height="8" rx="2" class="bar-track" />
-        <rect x="0" y="14" width="5" height="8" rx="2" fill="#f1e05a">
-          <animate attributeName="width" from="0" to="5" dur="1.2s" fill="freeze" />
+      <g transform="translate(0, 72)">
+        <text x="0" y="8" class="lang-name">JavaScript</text>
+        <text x="240" y="8" class="lang-pct" text-anchor="end">7.6%</text>
+        <rect x="0" y="14" width="240" height="7" rx="2" class="bar-track" />
+        <rect x="0" y="14" width="18" height="7" rx="2" fill="#8FA7B5">
+          <animate attributeName="width" from="0" to="18" dur="1s" fill="freeze" />
         </rect>
       </g>
     </g>

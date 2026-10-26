@@ -1,65 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="auto">
   <defs>
-    <pattern id="dot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#1E293B" opacity="0.4" />
+    <!-- Background Gradient -->
+    <linearGradient id="diag-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061D30" />
+      <stop offset="60%" stop-color="#042F40" />
+      <stop offset="100%" stop-color="#061D30" />
+    </linearGradient>
+
+    <!-- Card Gradient -->
+    <linearGradient id="diag-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064663" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#042F40" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Dot Grid -->
+    <pattern id="diag-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="0.75" fill="#064663" opacity="0.5" />
     </pattern>
-    <style>
-      .bg { fill: #030508; stroke: #0F172A; stroke-width: 1; }
-      .title-main { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #64748B; letter-spacing: 2px; }
-      .console-log { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 10px; fill: #64748B; }
-      .console-time { fill: #00E5FF; }
-      .console-success { fill: #00FF87; font-weight: bold; }
-      .metric-box { fill: #080B10; stroke: #1E293B; stroke-width: 1.5; }
-      .metric-val { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; font-weight: 700; fill: #F1F5F9; }
-      .metric-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 8px; fill: #64748B; letter-spacing: 0.5px; }
-      .accent-green { stroke: #00FF87; }
-      .accent-amber { stroke: #FF9100; }
-    </style>
   </defs>
 
-  <!-- Container -->
-  <rect width="800" height="200" rx="8" class="bg" />
-  <rect width="800" height="200" rx="8" fill="url(#dot-grid)" />
+  <style>
+    .diag-head { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00C9B7; letter-spacing: 2px; }
+    .diag-sub { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #8FA7B5; letter-spacing: 1px; }
+    .col-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11.5px; font-weight: 700; fill: #EAF2F5; letter-spacing: 0.2px; }
+    .param-label { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 8.5px; fill: #8FA7B5; font-weight: 600; }
+    .param-val { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; fill: #00C9B7; font-weight: 700; }
+    .param-val-alt { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; fill: #EAF2F5; font-weight: 600; }
+    .param-val-gold { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 9px; fill: #F0B45F; font-weight: 700; }
+  </style>
 
-  <!-- Top Header -->
-  <text x="30" y="30" class="title-main">SYSTEM TELEMETRY // INSTANCE DIAGNOSTICS</text>
-  <line x1="30" y1="40" x2="770" y2="40" stroke="#0F172A" stroke-width="1.5" />
+  <!-- Base Canvas -->
+  <rect width="900" height="180" rx="8" fill="url(#diag-bg)" stroke="#064663" stroke-width="1.5" />
+  <rect width="900" height="180" rx="8" fill="url(#diag-dots)" />
 
-  <!-- Terminal Console (Left) -->
-  <text x="30" y="70" class="console-log"><tspan class="console-time">[22:18:12]</tspan> BOOT: Deployed core profile 'TheCreativeCodeFlow' ... OK</text>
-  <text x="30" y="90" class="console-log"><tspan class="console-time">[22:18:13]</tspan> WEB: Mounting Next.js client router hooks ... <tspan class="console-success">ONLINE</tspan></text>
-  <text x="30" y="110" class="console-log"><tspan class="console-time">[22:18:14]</tspan> CORE: Initializing Job Scheduler thread-pools ... <tspan class="console-success">ACTIVE</tspan></text>
-  <text x="30" y="130" class="console-log"><tspan class="console-time">[22:18:15]</tspan> DATA: Linking PostgreSQL DB replica pools ... 99.9% uptime</text>
-  <text x="30" y="150" class="console-log"><tspan class="console-time">[22:18:16]</tspan> STATE: System diagnostic routine complete. Code: <tspan class="console-success">OPTIMAL</tspan></text>
+  <!-- Top Title HUD -->
+  <g transform="translate(28, 22)">
+    <circle cx="5" cy="4" r="3.5" fill="#00C9B7">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="8" class="diag-head">WORKSPACE DIAGNOSTICS // ENGINEERING ENVIRONMENT SPECIFICATIONS</text>
+    <text x="844" y="8" class="diag-sub" text-anchor="end">NODE SPECIFICATION: CONFIGURED</text>
+    <line x1="0" y1="16" x2="844" y2="16" stroke="#064663" stroke-width="1" />
+  </g>
 
-  <!-- Divider -->
-  <line x1="430" y1="55" x2="430" y2="175" stroke="#0F172A" stroke-width="1.5" />
+  <!-- COLUMN 1: RUNTIME CONFIGURATION -->
+  <g transform="translate(28, 48)">
+    <rect width="268" height="114" rx="5" fill="url(#diag-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#00C9B7" />
 
-  <!-- CPU Wave Chart (Middle) -->
-  <rect x="450" y="65" width="140" height="90" rx="4" class="metric-box" />
-  <!-- Grid background lines -->
-  <line x1="450" y1="95" x2="590" y2="95" stroke="#1E293B" stroke-width="0.5" />
-  <line x1="450" y1="125" x2="590" y2="125" stroke="#1E293B" stroke-width="0.5" />
-  <line x1="485" y1="65" x2="485" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
-  <line x1="520" y1="65" x2="520" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
-  <line x1="555" y1="65" x2="555" y2="155" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="2,2" />
-  <!-- CPU Wave line -->
-  <path d="M 450 135 L 470 120 L 490 140 L 510 90 L 530 110 L 550 75 L 570 130 L 590 85" fill="none" stroke="#00FF87" stroke-width="2" />
-  <path d="M 450 135 L 470 120 L 490 140 L 510 90 L 530 110 L 550 75 L 570 130 L 590 85 L 590 155 L 450 155 Z" fill="#00FF87" fill-opacity="0.05" />
-  <text x="520" y="145" class="metric-lbl" text-anchor="middle">CPU LOAD</text>
+    <text x="14" y="20" class="col-title">Primary Runtimes &amp; Shell</text>
+    <line x1="14" y1="26" x2="254" y2="26" stroke="#064663" stroke-width="0.75" />
 
-  <!-- Metric Panels (Right) -->
-  <!-- Box 1 (INTEGRITY) -->
-  <rect x="605" y="65" width="75" height="90" rx="4" class="metric-box" />
-  <circle cx="642" cy="100" r="15" fill="none" stroke="#1E293B" stroke-width="2.5" />
-  <circle cx="642" cy="100" r="15" fill="none" class="accent-green" stroke-width="2.5" stroke-dasharray="94" stroke-dashoffset="0" />
-  <text x="642" y="104" class="metric-val" text-anchor="middle">100%</text>
-  <text x="642" y="145" class="metric-lbl" text-anchor="middle">INTEGRITY</text>
+    <g transform="translate(14, 38)">
+      <text x="0" y="8" class="param-label">PRIMARY RUNTIME</text>
+      <text x="240" y="8" class="param-val" text-anchor="end">Node.js LTS / TS</text>
 
-  <!-- Box 2 (MESH STATE) -->
-  <rect x="695" y="65" width="75" height="90" rx="4" class="metric-box" />
-  <circle cx="732" cy="100" r="15" fill="none" stroke="#1E293B" stroke-width="2.5" />
-  <circle cx="732" cy="100" r="15" fill="none" class="accent-amber" stroke-width="2.5" stroke-dasharray="94" stroke-dashoffset="10" />
-  <text x="732" y="104" class="metric-val" text-anchor="middle">v3.1.0</text>
-  <text x="732" y="145" class="metric-lbl" text-anchor="middle">SYS VER</text>
+      <text x="0" y="26" class="param-label">SECONDARY RUNTIME</text>
+      <text x="240" y="26" class="param-val-alt" text-anchor="end">Python 3 / Java</text>
+
+      <text x="0" y="44" class="param-label">SHELL ENVIRONMENT</text>
+      <text x="240" y="44" class="param-val-alt" text-anchor="end">Zsh / Bash / POSIX</text>
+
+      <text x="0" y="62" class="param-label">PACKAGE MANAGER</text>
+      <text x="240" y="62" class="param-val" text-anchor="end">pnpm workspaces</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: WORKSPACE & MONOREPO ARCHITECTURE -->
+  <g transform="translate(316, 48)">
+    <rect width="268" height="114" rx="5" fill="url(#diag-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#064663" />
+
+    <text x="14" y="20" class="col-title">Workspace Orchestration</text>
+    <line x1="14" y1="26" x2="254" y2="26" stroke="#064663" stroke-width="0.75" />
+
+    <g transform="translate(14, 38)">
+      <text x="0" y="8" class="param-label">BUILD ENGINE</text>
+      <text x="240" y="8" class="param-val" text-anchor="end">Turborepo Pipeline</text>
+
+      <text x="0" y="26" class="param-label">TYPE INTEGRITY</text>
+      <text x="240" y="26" class="param-val" text-anchor="end">TypeScript Strict</text>
+
+      <text x="0" y="44" class="param-label">LINTING ENGINE</text>
+      <text x="240" y="44" class="param-val-alt" text-anchor="end">ESLint Flat Config</text>
+
+      <text x="0" y="62" class="param-label">STYLE FORMATTING</text>
+      <text x="240" y="62" class="param-val-alt" text-anchor="end">Prettier Configured</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: DEPLOYMENT & CONTAINER SPECIFICATION -->
+  <g transform="translate(604, 48)">
+    <rect width="268" height="114" rx="5" fill="url(#diag-card)" stroke="#064663" stroke-width="1" />
+    <rect width="268" height="3" rx="1.5" fill="#F0B45F" />
+
+    <text x="14" y="20" class="col-title">Automation &amp; Containers</text>
+    <line x1="14" y1="26" x2="254" y2="26" stroke="#064663" stroke-width="0.75" />
+
+    <g transform="translate(14, 38)">
+      <text x="0" y="8" class="param-label">CONTAINER ENGINE</text>
+      <text x="240" y="8" class="param-val-gold" text-anchor="end">Docker &amp; Compose</text>
+
+      <text x="0" y="26" class="param-label">CI / CD AUTOMATION</text>
+      <text x="240" y="26" class="param-val" text-anchor="end">GitHub Actions</text>
+
+      <text x="0" y="44" class="param-label">VERSION CONTROL</text>
+      <text x="240" y="44" class="param-val-alt" text-anchor="end">Git / Conventional Commits</text>
+
+      <text x="0" y="62" class="param-label">TASK ISOLATION</text>
+      <text x="240" y="62" class="param-val-gold" text-anchor="end">Worker Daemon Pools</text>
+    </g>
+  </g>
 </svg>

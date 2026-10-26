@@ -1,185 +1,239 @@
-# SYSTEM // ENGINEERING PROFILE
+# Rahul Seervi — Engineering Profile
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/hacker_typewriter.svg" width="100%" alt="Hacker Console Typing Effect" />
+  <img src="assets/profile_hero.svg" width="100%" alt="Rahul Seervi — Full-Stack &amp; Distributed Systems Engineering Hero" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SYSTEM-SECURED-00FF87?style=flat-square&amp;labelColor=080B10&amp;color=00FF87" alt="System Secured" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/WORKSPACE-STABLE-00E5FF?style=flat-square&amp;labelColor=080B10&amp;color=00E5FF" alt="Workspace Stable" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/DAEMON_PORT-9000_//_ACTIVE-FF9100?style=flat-square&amp;labelColor=080B10&amp;color=FF9100" alt="Daemon Active" />
-</p>
-
-## RAHUL SEERVI
-**`FULL-STACK ENGINEERING • DISTRIBUTED SYSTEMS • PLATFORMS • AI INTEGRATION`**
-
-> Full-stack software engineer specialized in designing resilient background systems, API infrastructures, and predictive engines. Focused on building clean system architectures, developer tools, and high-performance user interfaces.
-
-`BUILDING ➔ LEARNING ➔ SHIPPING ➔ REPEATING`
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/system_map.svg" width="100%" alt="System Architecture Flow Map" />
-</p>
-
----
-
-<p align="center">
-  <code><a href="#-core-engineering-pillars">SYSTEM CAPABILITIES</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-technical-constellation">CONSTELLATION</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-featured-build-distributed-job-scheduler">FEATURED BUILD</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-project-ledger">PROJECT LEDGER</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-kernel-specifications--system-logs">KERNEL SPECS</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-telemetry--system-diagnostics">TELEMETRY</a></code> &nbsp;▪&nbsp;
-  <code><a href="#-external-system-connection">CONNECT</a></code>
+  <a href="#engineering-capabilities">
+    <img src="https://img.shields.io/badge/FOCUS-DISTRIBUTED_SYSTEMS-00C9B7?style=flat-square&amp;labelColor=061D30" alt="Focus: Distributed Systems" />
+  </a>
+  &nbsp;
+  <a href="#featured-system">
+    <img src="https://img.shields.io/badge/ARCHITECTURE-MONOREPO_WORKSPACES-064663?style=flat-square&amp;labelColor=061D30" alt="Architecture: Monorepo Workspaces" />
+  </a>
+  &nbsp;
+  <a href="#technical-constellation">
+    <img src="https://img.shields.io/badge/CORE_RUNTIME-TYPESCRIPT_%26_NODE.JS-042F40?style=flat-square&amp;labelColor=061D30" alt="Core Runtime: TypeScript &amp; Node.js" />
+  </a>
+  &nbsp;
+  <a href="#academic-credentials">
+    <img src="https://img.shields.io/badge/SPECIALIZATION-BIG_DATA_ANALYTICS-F0B45F?style=flat-square&amp;labelColor=061D30" alt="Specialization: Big Data Analytics" />
+  </a>
 </p>
 
 ---
 
-### ⚡ Core Engineering Pillars
-
-#### 1. Predictable Architecture
-*Fail gracefully, recover predictably, scale horizontally.*  
-Building robust systems involves structuring decoupled microservices, handling high-throughput queues, and ensuring transactional consistency across distributed boundary runtimes.
-
-#### 2. Ecosystem Thinking
-*Integrate UI logic, backend APIs, data pipelines, and intelligent models seamlessly.*  
-Software is more than code—it is an ecosystem. Designing clean interfaces (React, Next.js) that coordinate with high-performance APIs (Node.js, Flask) and optimized database engines (PostgreSQL, Supabase) is critical.
-
-#### 3. High-Velocity Developer Experience (DX)
-*Automate the mundane, focus on the architecture.*  
-Leveraging monorepos (Turborepo), clean workspace package managers (pnpm), automated build pipelines, and strict type boundaries to keep shipping friction at absolute zero.
-
----
-
-### 🌌 Technical Constellation
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/stack_constellation.svg" width="100%" alt="Layered Stack Architecture" />
+  <code><a href="#system-architecture-overview">ARCHITECTURE</a></code> &nbsp;▪&nbsp;
+  <code><a href="#engineering-capabilities">CAPABILITIES</a></code> &nbsp;▪&nbsp;
+  <code><a href="#featured-system">FEATURED BUILD</a></code> &nbsp;▪&nbsp;
+  <code><a href="#project-ledger">PROJECT LEDGER</a></code> &nbsp;▪&nbsp;
+  <code><a href="#technical-constellation">STACK</a></code> &nbsp;▪&nbsp;
+  <code><a href="#engineering-environment">ENVIRONMENT</a></code> &nbsp;▪&nbsp;
+  <code><a href="#github-telemetry">TELEMETRY</a></code> &nbsp;▪&nbsp;
+  <code><a href="#contact-connection">CONNECT</a></code>
 </p>
 
 ---
 
-### 🚀 Featured Build: Distributed Job Scheduler
+## 📌 Introduction &amp; Engineering Positioning
 
-> **Architecture Type**: Microservices Monorepo  |  **Focus**: Queue &amp; Worker Systems  |  **Status**: Active Development
+Full-stack software engineer focused on resilient backend systems, distributed architectures, developer tooling, and intelligent software platforms. Specializing in high-concurrency event processing, decoupled service boundaries, and type-safe full-stack application development.
 
-#### The Problem
-Enqueuing, scheduling, partitioning, and auditing asynchronous tasks predictably without causing thread starvation, race conditions, or worker bottlenecks.
-
-#### System Architecture
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/scheduler_arch.svg" width="100%" alt="Distributed Job Scheduler Architecture" />
-</p>
-
-#### The Implementation
-*   **Monorepo Structure**: Engineered with `pnpm` workspaces and `Turborepo` to ensure shared configurations, isolated dependencies, and blazing-fast local caching loops.
-*   **Docker Containerization**: Containers spin up dynamically to allocate and execute tasks, preventing single-worker overload.
-*   **Real-time Event Stream**: Uses Server-Sent Events (SSE) to push job lifecycle state transitions (Enqueued ➔ Running ➔ Completed ➔ Failed) directly to a centralized monitoring terminal dashboard.
-
-#### Key Repositories
-*   [`Distributed-job-Scheduler`](https://github.com/TheCreativeCodeFlow/Distributed-job-Scheduler) — Core scheduling engine, queue scheduler, and telemetry server.
+### Engineering Philosophy
+> **"Resilience is not an afterthought; it is an architectural invariant."**  
+> Scalable software systems require strict type boundaries, predictable error domains, decoupled ingestion-to-execution pipelines, and relentless developer experience automation.
 
 ---
 
-### 📁 Project Ledger
+<a id="system-architecture-overview"></a>
+## 📐 System Architecture Overview
 
-An indexed registry of engineering projects built with specific architectural constraints.
+A conceptual topology of the engineering domains, lifecycle boundaries, and multi-tier components implemented across my workspaces:
 
-| Project | Primary Focus | Tech Stack | Status |
+<p align="center">
+  <img src="assets/system_architecture.svg" width="100%" alt="Conceptual System Architecture Topology Map" />
+</p>
+
+1. **Client Viewport Layer:** High-responsiveness web frontends and execution sandboxes built with **Next.js**, **React**, and **WebGL**.
+2. **API &amp; Ingestion Layer:** Type-safe REST and Server-Sent Event (SSE) ingress controllers using **Node.js**, **Express**, and **FastAPI**.
+3. **Async &amp; Distributed Processing:** Daemonized worker pools, partition locking brokers, and distributed mutex scheduling via **Turborepo** monorepo workspaces and **Docker**.
+4. **Persistence &amp; AI Layer:** Relational state machines (**PostgreSQL**), unstructured document stores (**MongoDB**), and NLP semantic embedding models (**SentenceTransformers**).
+5. **Observability Bus:** Continuous real-time status telemetry, lifecycle state push, and structured logging.
+
+---
+
+<a id="engineering-capabilities"></a>
+## ⚡ Engineering Capabilities
+
+### 1. Backend Engineering &amp; API Design
+Architecting low-latency, modular HTTP and real-time APIs. Prioritizing strict schema validation (Zod, TypeScript), idempotent endpoint contracts, and graceful error handling across asynchronous service barriers.
+- **Technologies:** `Node.js`, `TypeScript`, `Express`, `FastAPI`, `Python`, `REST`, `Server-Sent Events (SSE)`
+
+### 2. Distributed Systems &amp; Background Processing
+Designing fault-tolerant background scheduling engines and asynchronous execution pools. Implementing concurrency guards, retry backoffs, partitioned queue brokers, and dead-letter queue auditing.
+- **Technologies:** `Turborepo Monorepos`, `Docker`, `pnpm workspaces`, `Worker Daemons`, `Concurrency Locks`
+
+### 3. Full-Stack Product Engineering
+Delivering responsive, accessible client interfaces linked with optimized backend pipelines. Focusing on component-driven UI systems, interactive state management, and client-side canvas rendering.
+- **Technologies:** `Next.js (App Router)`, `React`, `TailwindCSS`, `Three.js / WebGL`, `Vite`
+
+### 4. AI Integration &amp; Data Systems
+Integrating predictive machine learning models, semantic search pipelines, and automated ATS matching into usable application workflows.
+- **Technologies:** `SentenceTransformers`, `HuggingFace Models`, `Scikit-Learn`, `PostgreSQL`, `MongoDB`
+
+---
+
+<a id="featured-system"></a>
+## 🚀 Featured System: Distributed Job Scheduler
+
+<p align="center">
+  <img src="assets/scheduler_architecture.svg" width="100%" alt="Distributed Job Scheduler Monorepo Architecture" />
+</p>
+
+> **Repository:** [`TheCreativeCodeFlow/Distributed-job-Scheduler`](https://github.com/TheCreativeCodeFlow/Distributed-job-Scheduler)  
+> **Architecture:** Microservices Monorepo &nbsp;|&nbsp; **Pattern:** Ingestion / Worker Separation &nbsp;|&nbsp; **Status:** `Active Development`
+
+### The Problem
+Traditional monolithic backends often combine API request processing and heavy asynchronous workloads on the same event loop. Under sudden traffic spikes, long-running tasks cause thread starvation, dropped HTTP connections, and uncoordinated worker crashes.
+
+### The Architecture &amp; Implementation
+- **Isolated Workspace Topology:** Structured as a high-velocity `pnpm` and `Turborepo` monorepo isolating `apps/api` (HTTP ingestion), `apps/worker` (execution daemon fleet), and `apps/web` (monitoring console), sharing schemas in `packages/shared` and `packages/database`.
+- **At-Least-Once Delivery:** Guarantees task state persistence across worker failures via distributed mutex locks and atomic database state transitions.
+- **Real-Time Lifecycle Broadcast:** Pushes job status changes (`ENQUEUED` ➔ `SCHEDULED` ➔ `RUNNING` ➔ `COMPLETED` / `FAILED`) directly to the monitoring terminal via Server-Sent Events (SSE).
+- **Containerized Sandboxing:** Packaged with `Docker` and `docker-compose` to run independent, self-healing worker pools capable of horizontal scaling.
+
+### Verified Stack
+`TypeScript` • `Node.js` • `Turborepo` • `pnpm` • `Docker` • `PostgreSQL` • `Server-Sent Events (SSE)`
+
+---
+
+<a id="project-ledger"></a>
+## 📁 Project Ledger
+
+An indexed registry of engineering projects built across specific architectural constraints:
+
+| Project | Domain / Focus | Key Technologies | Status |
 | :--- | :--- | :--- | :--- |
-| **[CodeZilaa](https://github.com/TheCreativeCodeFlow/CodeZilaa)** | Line-by-line program execution visualizer and practice sandbox | Next.js, React, TypeScript, TailwindCSS, Framer Motion | `Active Development` |
-| **[MockPilot](https://github.com/TheCreativeCodeFlow/MockPilot)** | Schema-driven mock API generation for automated testing infrastructure | Next.js, Node.js, Express, PostgreSQL, Docker | `Production / SaaS` |
-| **[CropCast](https://github.com/TheCreativeCodeFlow/CropCast)** | Predictive harvest forecasting utilizing microclimate ML models | React, Flask, Python, Scikit-Learn, MongoDB | `Active Development` |
-| **[Memex](https://github.com/TheCreativeCodeFlow/Memex)** | Linked markdown knowledge visualizer using force-directed graph models | React, Node.js, MongoDB, D3.js | `Completed / Archival` |
-| **[Cypher Resume Analyzer](https://github.com/TheCreativeCodeFlow/Cypher-Resume-Analyzer)** | NLP semantic mapping pipelines matching profiles to scorecards | JavaScript, Node.js, Express, Gemini API | `Stable Release` |
-| **[PharmaCare](https://github.com/TheCreativeCodeFlow/Pharmacy-Inventory-Management-System)** | Stock optimization dashboard with low-inventory warnings | React, Express, Supabase, CSS | `Stable Release` |
-| **[WebGL Portfolio](https://github.com/TheCreativeCodeFlow/About-ME)** | Canvas interactive particles using custom rigged webgl shaders | React, GSAP, Three.js, Lenis | `Stable Release` |
-| **[University Portal](https://github.com/TheCreativeCodeFlow/University-Management-System)** | Student portal featuring transactional course enrollment queues | Java, Spring Boot, MySQL, Thymeleaf | `Archived` |
+| **[Distributed Job Scheduler](https://github.com/TheCreativeCodeFlow/Distributed-job-Scheduler)** | Distributed task queue, worker isolation, and real-time SSE telemetry | TypeScript, Node.js, Turborepo, Docker, Postgres | `Active Development` |
+| **[CodeZilaa](https://github.com/TheCreativeCodeFlow/CodeZilaa)** | Line-by-line program execution visualizer and algorithmic practice sandbox | Next.js, React, TypeScript, TailwindCSS, Framer Motion | `Active Development` |
+| **[MockPilot](https://github.com/TheCreativeCodeFlow/MockPilot)** | Dynamic mock API generation and automated testing harness | React, TypeScript, Vite, Node.js, Express, Docker | `Active Development` |
+| **[CropCast](https://github.com/TheCreativeCodeFlow/CropCast)** | Predictive harvest forecasting utilizing microclimate ML models | Python, Scikit-Learn, React, Flask, MongoDB | `Active Development` |
+| **[Memex](https://github.com/TheCreativeCodeFlow/Memex)** | Linked markdown knowledge visualizer with interactive force graph rendering | React, TypeScript, Vite, D3.js, Node.js | `Completed` |
+| **[Cypher Resume Analyzer](https://github.com/TheCreativeCodeFlow/Cypher-Resume-Analyzer)** | Hybrid resume relevance evaluator matching profiles with SentenceTransformers NLP | Python, Streamlit, SentenceTransformers, HuggingFace | `Stable Release` |
+| **[PharmaCare](https://github.com/TheCreativeCodeFlow/Pharmacy-Inventory-Management-System)** | Stock optimization dashboard with automated low-inventory alerts | React, Node.js, Express, Supabase, PostgreSQL | `Stable Release` |
+| **[WebGL Portfolio](https://github.com/TheCreativeCodeFlow/About-ME)** | Interactive canvas visualizer using custom shaders and physics-based particles | Three.js, React, GSAP, WebGL, Lenis | `Stable Release` |
+| **[University Management System](https://github.com/TheCreativeCodeFlow/University-Management-System)** | Academic administration portal handling student registration and course queues | Java / TypeScript, Spring Boot, MySQL, Thymeleaf | `Archived` |
 
 ---
 
-### ⚙️ Kernel Specifications &amp; System Logs
-
-#### Environmental Configuration
-```text
-WORKSPACE_ENV ➔
-├── SHELL         ➔ /bin/zsh
-├── EDITOR        ➔ nvim (Neovim)
-├── RUNTIMES      ➔ Node.js v20 / Python 3.11 / Java 17
-├── MODULE_PACKS  ➔ pnpm workspace / Turborepo monorepo
-├── LOCAL_HOST    ➔ Decoupled offline mock runtimes
-└── TYPE_SECURITY ➔ TypeScript strict boundary schemas
-```
-
-#### System Event Logs (Achievements)
-```text
-SYS_EVENTS ➔
-├── [Q1 2026] ➔ Deployed CodeZilaa & Distributed Job Scheduler workspaces
-├── [Q1 2024] ➔ Smart India & Tensor Hackathons — Compiled predictive models
-├── [Q4 2023] ➔ MongoDB Developer Certification — Checked document-model metrics
-└── [Q3 2023] ➔ Android Developer Certification — Checked mobile lifecycles
-```
-
-
-
-
-
----
-
-### 📊 Telemetry &amp; System Diagnostics
+<a id="technical-constellation"></a>
+## 🌌 Technical Constellation
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/system_diagnostics.svg" width="100%" alt="System Diagnostics Log &amp; Metrics" />
+  <img src="assets/technology_stack.svg" width="100%" alt="Technical Constellation — Languages, Frameworks, and Toolchains" />
 </p>
 
-<h4 align="center">ACTIVE CONTRIBUTION GRID</h4>
+### Domain Breakdown
+- **Core Languages:** TypeScript (Strict Mode), JavaScript (ESNext), Python 3, Java.
+- **Client &amp; Web:** React.js, Next.js (SSR / App Router), TailwindCSS, Three.js / WebGL.
+- **Backend &amp; Ingestion:** Node.js, Express.js, FastAPI, Flask, Server-Sent Events (SSE).
+- **Persistence &amp; Caching:** PostgreSQL, MongoDB, Supabase, Prisma ORM.
+- **Distributed &amp; Monorepos:** Turborepo, pnpm workspaces, Worker Pools, Concurrency Locks.
+- **Machine Learning &amp; AI:** SentenceTransformers, HuggingFace Models, Scikit-Learn.
+- **Infrastructure &amp; Tooling:** Docker, Docker Compose, Git, GitHub Actions, ESLint Flat Config, Prettier.
+
+---
+
+<a id="engineering-environment"></a>
+## ⚙️ Engineering Environment
+
+<p align="center">
+  <img src="assets/system_diagnostics.svg" width="100%" alt="Engineering Environment Diagnostics Specification" />
+</p>
+
+```text
+WORKSPACE_SPECIFICATION ➔
+├── RUNTIME_CORE    ➔ Node.js (Active LTS) / Python 3 / Java
+├── TYPE_SYSTEM     ➔ TypeScript (Strict Mode: noImplicitAny, strictNullChecks)
+├── MONOREPO_ENGINE ➔ Turborepo / pnpm isolated workspaces
+├── CONTAINER_HOST  ➔ Docker Engine & Docker Compose Multi-Service Stacks
+├── SHELL_PROFILE   ➔ Zsh / POSIX / Neovim Development Workflow
+└── CODE_GOVERNANCE ➔ ESLint Flat Config / Prettier / Conventional Commits
+```
+
+---
+
+<a id="academic-credentials"></a>
+## 🏆 Achievements &amp; Academic Credentials
+
+- **Academic Specialization:** B.Tech in Computer Science and Engineering (Specialization: **Big Data Analytics**) — *SRM Institute of Science and Technology*.
+- **Certified Developer Credentials:**
+  - **MongoDB Certified Developer** — Verified data modeling, aggregation pipelines, and document schema optimization.
+  - **Android Certified Developer** — Verified application lifecycle architecture, thread dispatching, and mobile UI states.
+- **Hackathon Participations:**
+  - **Smart India Hackathon** — Engineered predictive analytical workflows and automated data aggregation pipelines.
+  - **Tensor Hackathon** — Developed machine learning and semantic scoring architectures for domain-specific evaluation.
+
+---
+
+<a id="github-telemetry"></a>
+## 📊 GitHub Telemetry
+
+Continuous activity and repository metrics synchronized via automated GitHub Actions:
+
+<p align="center">
+  <img src="assets/github_telemetry.svg" width="100%" alt="GitHub Core Telemetry Dashboard" />
+</p>
+
+<h4 align="center">ACTIVE CONTRIBUTION SNAKE</h4>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/github-contribution-grid-snake/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Snake Grid" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheCreativeCodeFlow/Thecreativecodeflow/main/assets/github_telemetry.svg" width="100%" alt="GitHub Core Telemetry" />
-</p>
+> *Telemetry data is automatically generated and updated via a scheduled GitHub Actions workflow querying the GitHub GraphQL API.*
 
 ---
 
-### 🧭 Current Workspaces &amp; Exploration
+## 🧭 Current Engineering Focus
 
 ```text
-NOW ➔
-├── 🛠️ Building: Enterprise SaaS mock infrastructures & system state monitors
-├── 🧠 Exploring: Multi-worker partition logic & stream synchronizations (SSE)
-├── 📖 Learning: Advanced Android lifecycle internals & transactional database configurations
-└── 🚀 Tuning: Performance load factors of deep client canvas rendering systems
+CURRENT_INITIATIVES ➔
+├── 🏗️ Scaling: High-throughput job partitioning & distributed worker pools
+├── ⚡ Streaming: SSE event pipelines for real-time lifecycle synchronization
+├── 📦 Tooling: Monorepo caching strategies with Turborepo & pnpm
+└── 🧠 Experimenting: Semantic vector search & hybrid ATS scoring pipelines
 ```
 
 ---
 
-### 🔌 External System Connection
+<a id="contact-connection"></a>
+## 🔌 Contact &amp; Connection
 
-Establish a direct socket connection via the parameters below:
-
-```text
-SSH Endpoint: ssh://TheCreativeCodeFlow@github
-Optimal Input: Systems design, background workers, interactive engines, product loops.
-Target Port:  contact.sys
-```
+Feel free to reach out to discuss distributed systems, backend architectures, or open-source collaborations:
 
 <p align="center">
-  <code><a href="https://github.com/TheCreativeCodeFlow">GITHUB.SYS</a></code> &nbsp;▪&nbsp;
-  <code><a href="https://www.linkedin.com/in/rahul-seervi-thecreativecodeflow/">LINKEDIN.SYS</a></code> &nbsp;▪&nbsp;
-  <code><a href="https://rahulseervi.vercel.app/">PORTFOLIO.SYS</a></code> &nbsp;▪&nbsp;
-  <code><a href="mailto:thecreativecodeflow@gmail.com">EMAIL.SYS</a></code>
+  <a href="https://github.com/TheCreativeCodeFlow">
+    <img src="https://img.shields.io/badge/GITHUB-TheCreativeCodeFlow-00C9B7?style=flat-square&amp;logo=github&amp;logoColor=EAF2F5&amp;labelColor=061D30" alt="GitHub Profile" />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/rahul-seervi-thecreativecodeflow/">
+    <img src="https://img.shields.io/badge/LINKEDIN-Rahul_Seervi-064663?style=flat-square&amp;logo=linkedin&amp;logoColor=EAF2F5&amp;labelColor=061D30" alt="LinkedIn Profile" />
+  </a>
+  &nbsp;
+  <a href="https://rahulseervi.vercel.app/">
+    <img src="https://img.shields.io/badge/PORTFOLIO-rahulseervi.vercel.app-042F40?style=flat-square&amp;logo=vercel&amp;logoColor=EAF2F5&amp;labelColor=061D30" alt="Portfolio Website" />
+  </a>
+  &nbsp;
+  <a href="mailto:thecreativecodeflow@gmail.com">
+    <img src="https://img.shields.io/badge/EMAIL-thecreativecodeflow%40gmail.com-F0B45F?style=flat-square&amp;logo=gmail&amp;logoColor=061D30&amp;labelColor=061D30" alt="Email Rahul Seervi" />
+  </a>
 </p>
 
----
-
-
+<br />
 
 <p align="center">
-  <font size="2" color="#00FF87">ENGINEERED WITH CURIOSITY // BUILT WITH PURPOSE // SHIPPED WITH DISCIPLINE</font>
-  <br />
-  <strong>Rahul Seervi</strong>
+  <img src="assets/profile_footer.svg" width="100%" alt="Profile Closing Architecture Banner" />
 </p>
